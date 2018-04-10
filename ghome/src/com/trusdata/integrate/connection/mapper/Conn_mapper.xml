@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trusdata.integrate.connection.mapper.ConnMapper">
+	<resultMap id="BaseResultMap" type="com.trusdata.integrate.connection.bean.ConnListBean">
+		<result property="t_name" column="t_name" jdbcType="VARCHAR" />
+		<result property="t_description" column="t_description" jdbcType="VARCHAR" />
+		<result property="t_work_user" column="t_work_user" jdbcType="VARCHAR" />
+		<result property="t_host" column="t_host" jdbcType="VARCHAR" />
+		<result property="t_port" column="t_port" jdbcType="VARCHAR" />
+		<result property="t_type" column="t_type" jdbcType="VARCHAR" />
+		<result property="t_db_name" column="t_db_name" jdbcType="VARCHAR" />
+		<result property="t_user" column="t_user" jdbcType="VARCHAR" />
+		<result property="t_password" column="t_password" jdbcType="VARCHAR" />
+		<result property="t_repair_user" column="t_repair_user" jdbcType="VARCHAR" />
+		<result property="t_repair_password" column="t_repair_password" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<!--查询条件 -->
+	<sql id="sqlCondition">
+		<![CDATA[
+			FROM trus_server 
+			WHERE 1 = 1
+		]]>
+		<if test="t_work_user !=null and t_work_user != ''">
+			AND t_work_user = #{t_work_user}
+		</if>
+	</sql>
+	
+	<!-- 取得总数 -->
+	<select id="selectCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.integrate.connection.bean.ConnSearchBean">
+		SELECT count(0)
+		<include refid="sqlCondition" />
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="selectInfo" parameterType="com.trusdata.integrate.connection.bean.ConnSearchBean"
+		resultMap="BaseResultMap">
+		SELECT t_name,
+			t_description,
+			t_type
+		<include refid="sqlCondition" />
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
+</mapper>

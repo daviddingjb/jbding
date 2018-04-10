@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/pages" extends="struts-default" namespace="/">
+		<action name="login_*" class="com.trusdata.integrate.login.action.LoginAction" method="{1}">
+			<result name="init">/pages/frontlogin.jsp</result>
+			<result name="integrate">/pages/index.jsp</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+		<action name="conn_*" class="com.trusdata.integrate.connection.action.ConnectionAction" method="{1}">
+			<result name="init">/pages/connection/connlist.jsp</result>
+			<result name="sub">/pages/connection/connlist_body_content.jsp</result>
+			<result name="add">/pages/connection/add.jsp</result>
+	        <result name="add_ok" type="redirectAction">conn_init</result>
+			<result name="edit">/pages/connection/edit.jsp</result>
+			<result name="delete">/pages/connection/delete.jsp</result>
+			<result name="check_error">login.jsp</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+		<action name="group_*" class="com.trusdata.integrate.group.action.GroupAction" method="{1}">
+			<result name="init">/pages/group/grouplist.jsp</result>
+			<result name="sub">/pages/group/grouplist_body_content.jsp</result>
+			<result name="add">/pages/group/add.jsp</result>
+	        <result name="add_ok" type="redirectAction">pairGroup_pair</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+		<action name="pairGroup_*" class="com.trusdata.integrate.group.action.PairGroupAction" method="{1}">
+	        <result name="pair">/pages/group/pair.jsp</result>
+			<result name="pair_sub">/pages/group/pair_body.jsp</result>
+	        <result name="pair_ok" type="redirectAction">group_init</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+		<action name="jobs_*" class="com.trusdata.integrate.jobs.action.JobsAction" method="{1}">
+			<result name="init">/pages/jobs/joblist.jsp</result>
+			<result name="add">/pages/jobs/add.jsp</result>
+	        <result name="add_ok" type="redirectAction">jobs_init</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+	</package>
+</struts>

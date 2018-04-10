@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trusdata.integrate.group.mapper.GroupMapper">
+	<resultMap id="BaseResultMap" type="com.trusdata.integrate.group.bean.GroupMappingListBean">
+		<result property="t_name" column="t_name" jdbcType="VARCHAR" />
+		<result property="t_description" column="t_description" jdbcType="VARCHAR" />
+		<result property="t_work_user" column="t_work_user" jdbcType="VARCHAR" />
+		<result property="t_source_name" column="t_source_name" jdbcType="VARCHAR" />
+		<result property="t_target_name" column="t_target_name" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<resultMap id="PairResultMap" type="com.trusdata.integrate.group.bean.PairGroup">
+		<result property="pair_group_name" column="pair_group_name" jdbcType="VARCHAR" />
+		<result property="source_tbl_name" column="source_tbl_name" jdbcType="VARCHAR" />
+		<result property="target_tbl_name" column="target_tbl_name" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<!--查询条件 -->
+	<sql id="sqlCondition">
+		<![CDATA[
+			FROM trus_mapping 
+			WHERE 1 = 1
+		]]>
+		<if test="t_work_user !=null and t_work_user != ''">
+			AND t_work_user = #{t_work_user}
+		</if>
+	</sql>
+	<sql id="pairCondition">
+		<![CDATA[
+			from
+			(select distinct t_db_name,t_table_name from trusdata.trus_column where t_server_name = #{t_source_name}) s
+			left outer join  
+			(select distinct t_db_name,t_table_name from trusdata.trus_column where t_server_name = #{t_target_name}) t
+			on s.t_db_name = t.t_db_name and s.t_table_name = t.t_table_name
+		]]>
+	</sql>
+	
+	<!-- 取得总数 -->
+	<select id="selectCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.integrate.group.bean.GroupSearchBean">
+		SELECT count(0)
+		<include refid="sqlCondition" />
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="selectInfo" parameterType="com.trusdata.integrate.group.bean.GroupSearchBean"
+		resultMap="BaseResultMap">
+		SELECT t_name,
+			t_description,
+			t_source_name,
+			t_target_name
+		<include refid="sqlCondition" />
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
+	
+	<!-- 取得总数 -->
+	<select id="pairCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.integrate.group.bean.PairGroupSearchBean">
+		SELECT count(0)
+		<include refid="pairCondition" />
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="pairInfo" parameterType="com.trusdata.integrate.group.bean.PairGroupSearchBean"
+		resultMap="PairResultMap">
+		select distinct
+		case
+			when s.t_table_name = t.t_table_name then concat(s.t_table_name, '=', t.t_table_name)
+			when s.t_table_name is null then concat('=', t.t_table_name)
+			when t.t_table_name is null then concat(s.t_table_name, '=')
+		end as pair_group_name ,
+		s.t_table_name as source_tbl_name,
+		t.t_table_name as target_tbl_name
+		<include refid="pairCondition" />
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
+</mapper>
