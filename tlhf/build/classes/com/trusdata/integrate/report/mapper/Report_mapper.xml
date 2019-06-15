@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trusdata.integrate.report.mapper.ReportMapper">
+	<resultMap id="BaseResultMap" type="com.trusdata.integrate.report.bean.ReportInsertBean">
+		<result property="id1" column="id1" jdbcType="VARCHAR"/>
+		<result property="year1" column="year1" jdbcType="DATE"/>
+		<result property="county" column="county" jdbcType="VARCHAR"/>
+		<result property="township" column="township" jdbcType="VARCHAR"/>
+		<result property="village" column="village" jdbcType="VARCHAR"/>
+		<result property="group1" column="group1" jdbcType="VARCHAR"/>
+		<result property="name1" column="name1" jdbcType="VARCHAR"/>
+		<result property="family_size" column="family_size" jdbcType="INTEGER"/>
+		<result property="workers_size" column="workers_size" jdbcType="INTEGER"/>
+		<result property="dibao_size" column="dibao_size" jdbcType="INTEGER"/>
+		<result property="wudao_size" column="wudao_size" jdbcType="INTEGER"/>
+		<result property="poverty_level1" column="poverty_level1" jdbcType="INTEGER"/>
+		<result property="poverty_level2" column="poverty_level2" jdbcType="INTEGER"/>
+		<result property="poverty_level3" column="poverty_level3" jdbcType="INTEGER"/>
+		<result property="poverty_level4" column="poverty_level4" jdbcType="INTEGER"/>
+		<result property="sign1" column="sign1" jdbcType="INTEGER"/>
+		<result property="sign_date" column="sign_date" jdbcType="DATE"/>
+		<result property="reporter" column="reporter" jdbcType="VARCHAR"/>
+		<result property="report_date" column="report_date" jdbcType="DATE"/>
+		<result property="id2" column="id2" jdbcType="VARCHAR"/>
+		<result property="industry1" column="industry1" jdbcType="INTEGER"/>
+		<result property="industry2" column="industry2" jdbcType="INTEGER"/>
+		<result property="industry3" column="industry3" jdbcType="INTEGER"/>
+		<result property="industry4" column="industry4" jdbcType="INTEGER"/>
+		<result property="industry5" column="industry5" jdbcType="INTEGER"/>
+		<result property="industry6" column="industry6" jdbcType="INTEGER"/>
+		<result property="industry7" column="industry7" jdbcType="INTEGER"/>
+		<result property="content7" column="content7" jdbcType="VARCHAR"/>
+		<result property="industry8" column="industry8" jdbcType="INTEGER"/>
+		<result property="scope11" column="scope11" jdbcType="INTEGER"/>
+		<result property="scope12" column="scope12" jdbcType="INTEGER"/>
+		<result property="skill1" column="skill1" jdbcType="INTEGER"/>
+		<result property="skill2" column="skill2" jdbcType="INTEGER"/>
+		<result property="skill3" column="skill3" jdbcType="INTEGER"/>
+		<result property="skill4" column="skill4" jdbcType="INTEGER"/>
+		<result property="content4" column="content4" jdbcType="VARCHAR"/>
+		<result property="skill5" column="skill5" jdbcType="INTEGER"/>
+		<result property="scope21" column="scope21" jdbcType="INTEGER"/>
+		<result property="scope22" column="scope22" jdbcType="INTEGER"/>
+		<result property="money1" column="money1" jdbcType="DOUBLE"/>
+		<result property="money2" column="money2" jdbcType="DOUBLE"/>
+		<result property="fupinbz" column="fupinbz" jdbcType="DOUBLE"/>
+		<result property="check1y" column="check1y" jdbcType="INTEGER"/>
+		<result property="check1n" column="check1n" jdbcType="INTEGER"/>
+		<result property="scope31" column="scope31" jdbcType="INTEGER"/>
+		<result property="scope32" column="scope32" jdbcType="INTEGER"/>
+		<result property="renjun" column="renjun" jdbcType="DOUBLE"/>
+		<result property="check2y" column="check2y" jdbcType="INTEGER"/>
+		<result property="check2n" column="check2n" jdbcType="INTEGER"/>
+		<result property="scope41" column="scope41" jdbcType="INTEGER"/>
+		<result property="scope42" column="scope42" jdbcType="INTEGER"/>
+		<result property="income" column="income" jdbcType="DOUBLE"/>
+		<result property="check3y" column="check3y" jdbcType="INTEGER"/>
+		<result property="check3n" column="check3n" jdbcType="INTEGER"/>
+		<result property="check3o" column="check3o" jdbcType="INTEGER"/>
+		<result property="scope51" column="scope51" jdbcType="INTEGER"/>
+		<result property="scope52" column="scope52" jdbcType="INTEGER"/>
+		<result property="increase" column="increase" jdbcType="DOUBLE"/>
+		<result property="ave_increase" column="ave_increase" jdbcType="DOUBLE"/>
+		<result property="check4y" column="check4y" jdbcType="INTEGER"/>
+		<result property="check4n" column="check4n" jdbcType="INTEGER"/>
+		<result property="scope61" column="scope61" jdbcType="INTEGER"/>
+		<result property="scope62" column="scope62" jdbcType="INTEGER"/>
+		<result property="id3" column="id3" jdbcType="VARCHAR"/>
+		<result property="eat_y" column="eat_y" jdbcType="INTEGER"/>
+		<result property="eat_n" column="eat_n" jdbcType="INTEGER"/>
+		<result property="scope72" column="scope72" jdbcType="INTEGER"/>
+		<result property="wear_y" column="wear_y" jdbcType="INTEGER"/>
+		<result property="wear_n" column="wear_n" jdbcType="INTEGER"/>
+		<result property="scope82" column="scope82" jdbcType="INTEGER"/>
+		<result property="id4" column="id4" jdbcType="VARCHAR"/>
+		<result property="house1" column="house1" jdbcType="INTEGER"/>
+		<result property="house2" column="house2" jdbcType="INTEGER"/>
+		<result property="scope91" column="scope91" jdbcType="INTEGER"/>
+		<result property="scope92" column="scope92" jdbcType="INTEGER"/>
+		<result property="house_size" column="house_size" jdbcType="DOUBLE"/>
+		<result property="family_n" column="family_n" jdbcType="INTEGER"/>
+		<result property="people_size" column="people_size" jdbcType="DOUBLE"/>
+		<result property="scope101" column="scope101" jdbcType="INTEGER"/>
+		<result property="scope102" column="scope102" jdbcType="INTEGER"/>
+		<result property="house_y" column="house_y" jdbcType="INTEGER"/>
+		<result property="house_n" column="house_n" jdbcType="INTEGER"/>
+		<result property="water1" column="water1" jdbcType="INTEGER"/>
+		<result property="water2" column="water2" jdbcType="INTEGER"/>
+		<result property="water3" column="water3" jdbcType="INTEGER"/>
+		<result property="scope111" column="scope111" jdbcType="INTEGER"/>
+		<result property="scope112" column="scope112" jdbcType="INTEGER"/>
+		<result property="electricity1" column="electricity1" jdbcType="INTEGER"/>
+		<result property="electricity2" column="electricity2" jdbcType="INTEGER"/>
+		<result property="electricity3" column="electricity3" jdbcType="INTEGER"/>
+		<result property="scope121" column="scope121" jdbcType="INTEGER"/>
+		<result property="scope122" column="scope122" jdbcType="INTEGER"/>
+		<result property="traffic1" column="traffic1" jdbcType="INTEGER"/>
+		<result property="traffic2" column="traffic2" jdbcType="INTEGER"/>
+		<result property="traffic3" column="traffic3" jdbcType="INTEGER"/>
+		<result property="scope131" column="scope131" jdbcType="INTEGER"/>
+		<result property="scope132" column="scope132" jdbcType="INTEGER"/>
+		<result property="education1" column="education1" jdbcType="INTEGER"/>
+		<result property="education2" column="education2" jdbcType="INTEGER"/>
+		<result property="scope141" column="scope141" jdbcType="INTEGER"/>
+		<result property="scope142" column="scope142" jdbcType="INTEGER"/>
+		<result property="medical_treatment11" column="medical_treatment11" jdbcType="INTEGER"/>
+		<result property="medical_treatment12" column="medical_treatment12" jdbcType="INTEGER"/>
+		<result property="scope151" column="scope151" jdbcType="INTEGER"/>
+		<result property="scope152" column="scope152" jdbcType="INTEGER"/>
+		<result property="medical_treatment21" column="medical_treatment21" jdbcType="INTEGER"/>
+		<result property="medical_treatment22" column="medical_treatment22" jdbcType="INTEGER"/>
+		<result property="medical_treatment23" column="medical_treatment23" jdbcType="INTEGER"/>
+		<result property="scope161" column="scope161" jdbcType="INTEGER"/>
+		<result property="scope162" column="scope162" jdbcType="INTEGER"/>
+		<result property="pension1" column="pension1" jdbcType="INTEGER"/>
+		<result property="pension2" column="pension2" jdbcType="INTEGER"/>
+		<result property="scope171" column="scope171" jdbcType="INTEGER"/>
+		<result property="scope172" column="scope172" jdbcType="INTEGER"/>
+		<result property="scope182" column="scope182" jdbcType="INTEGER"/>
+	</resultMap>
+	<resultMap id="BaseResultMap1" type="com.trusdata.integrate.report.bean.ReportListBean">
+		<result property="id1" column="id1" jdbcType="VARCHAR" />
+		<result property="year1" column="year1" jdbcType="VARCHAR" />
+		<result property="county" column="county" jdbcType="VARCHAR" />
+		<result property="township" column="township" jdbcType="VARCHAR" />
+		<result property="village" column="village" jdbcType="VARCHAR" />
+		<result property="group1" column="group1" jdbcType="VARCHAR" />
+		<result property="name1" column="name1" jdbcType="VARCHAR" />
+		<result property="scope182" column="scope182" jdbcType="INTEGER" />
+	</resultMap>
+	
+	
+	<!--查询条件 -->
+	<sql id="sqlCondition">
+		<![CDATA[
+			FROM poverty.base 
+			WHERE 1 = 1
+		]]>
+		<if test="t_work_user !=null and t_work_user != ''">
+			AND reporter = #{t_work_user}
+		</if>
+	</sql>
+	
+	<!-- 取得总数 -->
+	<select id="selectCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.integrate.report.bean.ReportSearchBean">
+		SELECT count(0)
+		<include refid="sqlCondition" />
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="selectInfo" parameterType="com.trusdata.integrate.report.bean.ReportSearchBean"
+		resultMap="BaseResultMap1">
+		SELECT id1, year1, county, township, village, group1, name1, scope182
+		<include refid="sqlCondition" />
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
+	
+    <delete id="del" parameterType="com.trusdata.integrate.report.bean.ReportIdentifyBean" >
+		DELETE FROM poverty.base WHERE id1 = #{id1}
+    </delete>
+	
+    <insert id="insertbase" parameterType="com.trusdata.integrate.report.bean.ReportInsertBean">
+    insert into poverty.base 
+	(id1, year1, county, township, village, group1, name1, 
+	family_size, 
+	workers_size, 
+	dibao_size, 
+	wudao_size, 
+	poverty_level1, 
+	poverty_level2, 
+	poverty_level3, 
+	poverty_level4, 
+	sign1, 
+	sign_date, 
+	reporter, 
+	report_date, 
+	industry1, 
+	industry2, 
+	industry3, 
+	industry4, 
+	industry5, 
+	industry6, 
+	industry7, 
+	content7, 
+	industry8, 
+	scope11, 
+	scope12, 
+	skill1, 
+	skill2, 
+	skill3, 
+	skill4, 
+	content4, 
+	skill5, 
+	scope21, 
+	scope22, 
+	money1, 
+	money2, 
+	fupinbz, 
+	check1y, 
+	check1n, 
+	scope31, 
+	scope32, 
+	renjun, 
+	check2y, 
+	check2n, 
+	scope41, 
+	scope42, 
+	income, 
+	check3y, 
+	check3n, 
+	check3o, 
+	scope51, 
+	scope52, 
+	increase, 
+	ave_increase, 
+	check4y, 
+	check4n, 
+	scope61, 
+	scope62, 
+	eat_y, 
+	eat_n, 
+	scope72, 
+	wear_y, 
+	wear_n, 
+	scope82, 
+	house1, 
+	house2, 
+	scope91, 
+	scope92, 
+	house_size, 
+	family_n, 
+	people_size, 
+	scope101, 
+	scope102, 
+	house_y, 
+	house_n, 
+	water1, 
+	water2, 
+	water3, 
+	scope111, 
+	scope112, 
+	electricity1, 
+	electricity2, 
+	electricity3, 
+	scope121, 
+	scope122, 
+	traffic1, 
+	traffic2, 
+	traffic3, 
+	scope131, 
+	scope132, 
+	education1, 
+	education2, 
+	scope141, 
+	scope142, 
+	medical_treatment11, 
+	medical_treatment12, 
+	scope151, 
+	scope152, 
+	medical_treatment21, 
+	medical_treatment22, 
+	medical_treatment23, 
+	scope161, 
+	scope162, 
+	pension1, 
+	pension2, 
+	scope171, 
+	scope172, 
+	scope182
+	)
+	values
+	(#{id1}, #{year1}, #{county}, #{township}, #{village}, #{group1}, #{name1}, 
+	#{family_size}, 
+	#{workers_size}, 
+	#{dibao_size}, 
+	#{wudao_size}, 
+	#{poverty_level1}, 
+	#{poverty_level2}, 
+	#{poverty_level3}, 
+	#{poverty_level4}, 
+	#{sign1}, 
+	#{sign_date}, 
+	#{reporter}, 
+	#{report_date}, 
+	#{industry1}, 
+	#{industry2}, 
+	#{industry3}, 
+	#{industry4}, 
+	#{industry5}, 
+	#{industry6}, 
+	#{industry7}, 
+	#{content7}, 
+	#{industry8}, 
+	#{scope11}, 
+	#{scope12}, 
+	#{skill1}, 
+	#{skill2}, 
+	#{skill3}, 
+	#{skill4}, 
+	#{content4}, 
+	#{skill5}, 
+	#{scope21}, 
+	#{scope22}, 
+	#{money1}, 
+	#{money2}, 
+	#{fupinbz}, 
+	#{check1y}, 
+	#{check1n}, 
+	#{scope31}, 
+	#{scope32}, 
+	#{renjun}, 
+	#{check2y}, 
+	#{check2n}, 
+	#{scope41}, 
+	#{scope42}, 
+	#{income}, 
+	#{check3y}, 
+	#{check3n}, 
+	#{check3o}, 
+	#{scope51}, 
+	#{scope52}, 
+	#{increase}, 
+	#{ave_increase}, 
+	#{check4y}, 
+	#{check4n}, 
+	#{scope61}, 
+	#{scope62}, 
+	#{eat_y}, 
+	#{eat_n}, 
+	#{scope72}, 
+	#{wear_y}, 
+	#{wear_n}, 
+	#{scope82}, 
+	#{house1}, 
+	#{house2}, 
+	#{scope91}, 
+	#{scope92}, 
+	#{house_size}, 
+	#{family_n}, 
+	#{people_size}, 
+	#{scope101}, 
+	#{scope102}, 
+	#{house_y}, 
+	#{house_n}, 
+	#{water1}, 
+	#{water2}, 
+	#{water3}, 
+	#{scope111}, 
+	#{scope112}, 
+	#{electricity1}, 
+	#{electricity2}, 
+	#{electricity3}, 
+	#{scope121}, 
+	#{scope122}, 
+	#{traffic1}, 
+	#{traffic2}, 
+	#{traffic3}, 
+	#{scope131}, 
+	#{scope132}, 
+	#{education1}, 
+	#{education2}, 
+	#{scope141}, 
+	#{scope142}, 
+	#{medical_treatment11}, 
+	#{medical_treatment12}, 
+	#{scope151}, 
+	#{scope152}, 
+	#{medical_treatment21}, 
+	#{medical_treatment22}, 
+	#{medical_treatment23}, 
+	#{scope161}, 
+	#{scope162}, 
+	#{pension1}, 
+	#{pension2}, 
+	#{scope171}, 
+	#{scope172}, 
+	#{scope182}
+	)
+    </insert>
+</mapper>

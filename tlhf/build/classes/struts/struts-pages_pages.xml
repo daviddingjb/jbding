@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/pages" extends="struts-default" namespace="/">
+		<action name="login_*" class="com.trusdata.integrate.login.action.LoginAction" method="{1}">
+			<result name="init">/pages/frontlogin.jsp</result>
+			<result name="manager" type="redirectAction">query_init</result>
+			<result name="reporter" type="redirectAction">pact_init</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+		<action name="pact_*" class="com.trusdata.tlhf.input.action.PactAction" method="{1}">
+			<result name="init">/pages/input/reporter.jsp</result>
+			<result name="add">/pages/input/add_indoor_air.jsp</result>
+	        <result name="add_ok" type="redirectAction">pact_init</result>
+			<result name="sub">/pages/input/reporter_body_content.jsp</result>
+			<result name="upd">/pages/input/updInit.jsp</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+		
+		<action name="report_*" class="com.trusdata.integrate.report.action.ReportAction" method="{1}">
+			<result name="init">/pages/input/reporter.jsp</result>
+			<result name="add">/pages/input/add_indoor_air.jsp</result>
+	        <result name="add_ok" type="redirectAction">report_init</result>
+			<result name="sub">/pages/input/reporter_body_content.jsp</result>
+			<result name="upd">/pages/input/updInit.jsp</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+		<action name="manager_*" class="com.trusdata.integrate.manager.action.ManagerAction" method="{1}">
+			<result name="init">/pages/manager/manager.jsp</result>
+			<result name="add">/pages/input/add.jsp</result>
+	        <result name="add_ok" type="redirectAction">manager_init</result>
+			<result name="sub">/pages/manager/manager_body_content.jsp</result>
+			<result name="upd">/pages/manager/updInit.jsp</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+		<action name="userManage_*" class="com.trusdata.integrate.manager.action.UserManageAction" method="{1}">
+			<result name="init">/pages/manager/userManage.jsp</result>
+			<result name="addUser">/pages/manager/addUser.jsp</result>
+			<result name="adduser_ok" type="redirectAction">userManage_init</result>
+			<result name="sub">/pages/manager/userManage_body_content.jsp</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+		<action name="query_*" class="com.trusdata.integrate.manager.action.QueryAction" method="{1}">
+			<result name="init">/pages/manager/query.jsp</result>
+			<result name="quinit">/pages/manager/queryqu.jsp</result>
+			<result name="sub">/pages/manager/query_body_content.jsp</result>
+			<result name="downloadAll" type="redirectAction">query_init</result>
+			<result name="selectSub">/pages/manager/query_body_content.jsp</result>
+			<result name="entity">/pages/manager/look.jsp</result>
+	        <result name="error" type="redirectAction">login_init</result>
+		</action>
+	</package>
+</struts>
