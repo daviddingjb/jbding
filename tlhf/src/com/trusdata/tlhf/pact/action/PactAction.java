@@ -10,10 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.trusdata.common.action.BasePageAction;
 import com.trusdata.integrate.db.bean.P_user;
+import com.trusdata.tlhf.common.bean.TlhfUserBean;
 import com.trusdata.tlhf.pact.bean.IndoorAirBean;
 import com.trusdata.tlhf.pact.bean.PactIdentifyBean;
 import com.trusdata.tlhf.pact.bean.PactInputListBean;
-import com.trusdata.tlhf.pact.bean.PactSearchBean;
 import com.trusdata.tlhf.pact.bean.SetIndoorAirBean;
 import com.trusdata.tlhf.pact.service.PactService;
 
@@ -22,7 +22,7 @@ import com.trusdata.tlhf.pact.service.PactService;
  * @author JBDING
  * 
  */
-public class PactAction extends BasePageAction<PactSearchBean> {
+public class PactAction extends BasePageAction<TlhfUserBean> {
 	/**
 	 * UID
 	 */
@@ -33,7 +33,7 @@ public class PactAction extends BasePageAction<PactSearchBean> {
 	List<PactInputListBean> serverList;
 
 	private List<String> dbmsg;
-	private PactSearchBean searchBean = new PactSearchBean();
+	private TlhfUserBean searchBean = new TlhfUserBean();
 
 	/**
 	 * 资源管理Service
@@ -134,22 +134,22 @@ public class PactAction extends BasePageAction<PactSearchBean> {
 	}
 
 	@Override
-	public PactSearchBean getQueryBean() {
+	public TlhfUserBean getQueryBean() {
 		return searchBean;
 	}
 
 	@Override
-	public void setQueryBean(PactSearchBean queryBean) {
+	public void setQueryBean(TlhfUserBean queryBean) {
 		searchBean = queryBean;
 	}
 
-	public PactSearchBean getSearchBean() {
-		return searchBean;
-	}
-
-	public void setSearchBean(PactSearchBean searchBean) {
-		this.searchBean = searchBean;
-	}
+//	public TlhfUserBean getSearchBean() {
+//		return searchBean;
+//	}
+//
+//	public void setSearchBean(TlhfUserBean searchBean) {
+//		this.searchBean = searchBean;
+//	}
 
 	public IndoorAirBean getIndoor() {
 		return indoor;

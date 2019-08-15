@@ -90,13 +90,13 @@
 	
 	<!-- 取得总数 -->
 	<select id="selectCount" resultType="java.lang.Integer"
-		parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean">
+		parameterType="com.trusdata.tlhf.common.bean.TlhfUserBean">
 		SELECT count(0)
 		<include refid="sqlCondition" />
 	</select>
 	
 	<!-- 取得所有信息 -->
-	<select id="selectInfo" parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean"
+	<select id="selectInfo" parameterType="com.trusdata.tlhf.common.bean.TlhfUserBean"
 		resultMap="BaseResultMap1">
 		SELECT id, create_dt, input_name
 		<include refid="sqlCondition" />

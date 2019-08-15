@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.dao.DataAccessException;
 
+import com.trusdata.tlhf.common.bean.TlhfUserBean;
 import com.trusdata.tlhf.pact.bean.IndoorAirBean;
 import com.trusdata.tlhf.pact.bean.PactIdentifyBean;
 import com.trusdata.tlhf.pact.bean.PactInputListBean;
-import com.trusdata.tlhf.pact.bean.PactSearchBean;
 
 /**
  * 
@@ -23,10 +23,10 @@ public interface PactMapper {
 	 * @return
 	 * @throws DataAccessException
 	 */
-	public Integer selectCount(PactSearchBean queryBean)
+	public Integer selectCount(TlhfUserBean queryBean)
 			throws DataAccessException;
 
-	public List<PactInputListBean> selectInfo(PactSearchBean queryBean)
+	public List<PactInputListBean> selectInfo(TlhfUserBean queryBean)
 			throws DataAccessException;
 
 	public Integer insertIndoorAir(IndoorAirBean insertBean)

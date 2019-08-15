@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.trusdata.common.util.PageUtil;
+import com.trusdata.tlhf.common.bean.TlhfUserBean;
 import com.trusdata.tlhf.pact.bean.IndoorAirBean;
 import com.trusdata.tlhf.pact.bean.PactIdentifyBean;
 import com.trusdata.tlhf.pact.bean.PactInputListBean;
-import com.trusdata.tlhf.pact.bean.PactSearchBean;
 import com.trusdata.tlhf.pact.mapper.PactMapper;
 
 @Service
@@ -18,7 +18,7 @@ public class PactServiceImpl implements PactService {
 	PactMapper mapper;
 	
 	@Override
-	public List<PactInputListBean> selectAll(PactSearchBean queryBean) {
+	public List<PactInputListBean> selectAll(TlhfUserBean queryBean) {
 
 		// 查询数据总数
 		int sumItems = mapper.selectCount(queryBean);
