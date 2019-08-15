@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trusdata.tlhf.pact.mapper.PactMapper">
+	<resultMap id="BaseResultMap" type="com.trusdata.tlhf.pact.bean.IndoorAirBean">
+  		<result property="id" column="id" jdbcType="VARCHAR"/>
+  		<result property="entrusted_id" column="entrusted_id" jdbcType="VARCHAR"/>
+  		<result property="input_name" column="input_name" jdbcType="VARCHAR"/>
+  		<result property="create_dt" column="create_dt" jdbcType="DATE"/>
+  		<result property="upd_name" column="upd_name" jdbcType="VARCHAR"/>
+  		<result property="upd_dt" column="upd_dt" jdbcType="DATE"/>
+  		<result property="entrusted_chop" column="entrusted_chop" jdbcType="VARCHAR"/>
+ 		<result property="entrusted_signature" column="entrusted_signature" jdbcType="VARCHAR"/>
+ 		<result property="entrusted_date" column="entrusted_date" jdbcType="VARCHAR"/>
+	 	<result property="test_chop" column="test_chop" jdbcType="VARCHAR"/>
+ 		<result property="test_signature" column="test_signature" jdbcType="VARCHAR"/>
+  		<result property="test_date" column="test_date" jdbcType="VARCHAR"/>
+  		<result property="registered_date" column="registered_date" jdbcType="VARCHAR"/>
+  		<result property="testing_date" column="testing_date" jdbcType="VARCHAR"/>
+  		<result property="entrusted_settler" column="entrusted_settler" jdbcType="VARCHAR"/>
+  		<result property="obj_name" column="obj_name" jdbcType="VARCHAR"/>
+  		<result property="contract_name" column="contract_name" jdbcType="VARCHAR"/>
+  		<result property="contact_call" column="contact_call" jdbcType="VARCHAR"/>
+  		<result property="test_addr" column="test_addr" jdbcType="VARCHAR"/>
+  		<result property="check_ref1" column="check_ref1" jdbcType="VARCHAR"/>
+  		<result property="check_ref2" column="check_ref2" jdbcType="VARCHAR"/>
+  		<result property="check_ref3" column="check_ref3" jdbcType="VARCHAR"/>
+  		<result property="check_type" column="check_type" jdbcType="VARCHAR"/>
+  		<result property="check_other" column="check_other" jdbcType="VARCHAR"/>
+  		<result property="check_receive" column="check_receive" jdbcType="VARCHAR"/>
+  		<result property="check_receive_rmb" column="check_receive_rmb" jdbcType="VARCHAR"/>
+  		<result property="check_not_receive" column="check_not_receive" jdbcType="VARCHAR"/>
+  		<result property="check_not_receive_rmb" column="check_not_receive_rmb" jdbcType="VARCHAR"/>
+  		<result property="check_cash" column="check_cash" jdbcType="VARCHAR"/>
+  		<result property="check_cheque" column="check_cheque" jdbcType="VARCHAR"/>
+  		<result property="check_billing" column="check_billing" jdbcType="VARCHAR"/>
+  		<result property="report_typr" column="report_typr" jdbcType="VARCHAR"/>
+  		<result property="report_courier" column="report_courier" jdbcType="VARCHAR"/>
+  		<result property="report_other" column="report_other" jdbcType="VARCHAR"/>
+  		<result property="report_other_detail" column="report_other_detail" jdbcType="VARCHAR"/>
+  		<result property="report_courier_addr" column="report_courier_addr" jdbcType="VARCHAR"/>
+  		<result property="report_num" column="report_num" jdbcType="VARCHAR"/>
+  		<result property="report_date" column="report_date" jdbcType="VARCHAR"/>
+  		<result property="entity_benzene" column="entity_benzene" jdbcType="VARCHAR"/>
+  		<result property="entity_benzene_1" column="entity_benzene_1" jdbcType="VARCHAR"/>
+  		<result property="entity_benzene_2" column="entity_benzene_2" jdbcType="VARCHAR"/>
+  		<result property="entity_benzene_3" column="entity_benzene_3" jdbcType="VARCHAR"/>
+  		<result property="entity_benzene_4" column="entity_benzene_4" jdbcType="VARCHAR"/>
+  		<result property="entity_toluene" column="entity_toluene" jdbcType="VARCHAR"/>
+  		<result property="entity_toluene_1" column="entity_toluene_1" jdbcType="VARCHAR"/>
+  		<result property="entity_toluene_2" column="entity_toluene_2" jdbcType="VARCHAR"/>
+  		<result property="entity_formal" column="entity_formal" jdbcType="VARCHAR"/>
+  		<result property="entity_formal_1" column="entity_formal_1" jdbcType="VARCHAR"/>
+  		<result property="entity_formal_2" column="entity_formal_2" jdbcType="VARCHAR"/>
+  		<result property="entity_formal_3" column="entity_formal_3" jdbcType="VARCHAR"/>
+  		<result property="entity_n" column="entity_n" jdbcType="VARCHAR"/>
+  		<result property="entity_n_1" column="entity_n_1" jdbcType="VARCHAR"/>
+  		<result property="entity_tvoc" column="entity_tvoc" jdbcType="VARCHAR"/>
+  		<result property="entity_tvoc_1" column="entity_tvoc_1" jdbcType="VARCHAR"/>
+  		<result property="entity_tvoc_2" column="entity_tvoc_2" jdbcType="VARCHAR"/>
+  		<result property="entity_rn" column="entity_rn" jdbcType="VARCHAR"/>
+  		<result property="entity_rn_1" column="entity_rn_1" jdbcType="VARCHAR"/>
+  		<result property="entity_rn_2" column="entity_rn_2" jdbcType="VARCHAR"/>
+  		<result property="entity_rn_3" column="entity_rn_3" jdbcType="VARCHAR"/>
+  		<result property="entity_o3" column="entity_o3" jdbcType="VARCHAR"/>
+  		<result property="entity_o3_1" column="entity_o3_1" jdbcType="VARCHAR"/>
+  		<result property="entity_so2" column="entity_so2" jdbcType="VARCHAR"/>
+  		<result property="entity_so2_1" column="entity_so2_1" jdbcType="VARCHAR"/>
+  		<result property="entity_no2" column="entity_no2" jdbcType="VARCHAR"/>
+  		<result property="entity_no2_1" column="entity_no2_1" jdbcType="VARCHAR"/>
+  		<result property="other" column="other" jdbcType="VARCHAR"/>
+	</resultMap>
+	<resultMap id="BaseResultMap1" type="com.trusdata.tlhf.pact.bean.PactInputListBean">
+		<result property="id1" column="id" jdbcType="VARCHAR" />
+		<result property="input_date" column="create_dt" jdbcType="VARCHAR" />
+		<result property="inputer" column="input_name" jdbcType="VARCHAR" />
+		<result property="call_way" column="call_way" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	
+	<!--查询条件 -->
+	<sql id="sqlCondition">
+		<![CDATA[
+			FROM tlhf.indoor_air 
+			WHERE 1 = 1
+		]]>
+		<if test="t_work_user !=null and t_work_user != ''">
+			AND input_name = #{t_work_user}
+		</if>
+	</sql>
+	
+	<!-- 取得总数 -->
+	<select id="selectCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean">
+		SELECT count(0)
+		<include refid="sqlCondition" />
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="selectInfo" parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean"
+		resultMap="BaseResultMap1">
+		SELECT id, create_dt, input_name
+		<include refid="sqlCondition" />
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
+	
+    <delete id="del" parameterType="com.trusdata.tlhf.pact.bean.PactIdentifyBean" >
+		DELETE FROM tlhf.indoor_air WHERE id = #{id1}
+    </delete>
+	
+    <insert id="insertIndoorAir" parameterType="com.trusdata.tlhf.pact.bean.IndoorAirBean">
+	insert into tlhf.indoor_air 
+	(id, entrusted_id, input_name, create_dt, upd_name, upd_dt, entrusted_chop, entrusted_signature, entrusted_date, 
+	test_chop, test_signature, test_date, 
+	registered_date, 
+	testing_date, 
+	entrusted_settler, 
+	obj_name, 
+	contract_name, 
+	contact_call, 
+	test_addr, 
+	check_ref1, check_ref2, check_ref3, check_type, check_other, 
+	check_receive, check_receive_rmb, check_not_receive, check_not_receive_rmb, check_cash, check_cheque, check_billing, 
+	report_typr, report_courier, report_other, report_other_detail, report_courier_addr, report_num, report_date, 
+	entity_benzene, entity_benzene_1, entity_benzene_2, entity_benzene_3, entity_benzene_4, 
+	entity_toluene, entity_toluene_1, entity_toluene_2, 
+	entity_formal, entity_formal_1, entity_formal_2, entity_formal_3, 
+	entity_n, entity_n_1, entity_tvoc, entity_tvoc_1, entity_tvoc_2, 
+	entity_rn, entity_rn_1, entity_rn_2, entity_rn_3, 
+	entity_o3, entity_o3_1, 
+	entity_so2, entity_so2_1, 
+	entity_no2, entity_no2_1, 
+	other
+	)
+	values
+	(#{id}, #{entrusted_id}, #{input_name}, #{create_dt}, #{upd_name}, #{upd_dt}, #{entrusted_chop}, #{entrusted_signature}, #{entrusted_date}, 
+	#{test_chop}, #{test_signature}, #{test_date}, 
+	#{registered_date}, 
+	#{testing_date}, 
+	#{entrusted_settler}, 
+	#{obj_name}, 
+	#{contract_name}, 
+	#{contact_call}, 
+	#{test_addr}, 
+	#{check_ref1}, #{check_ref2}, #{check_ref3}, #{check_type}, #{check_other}, 
+	#{check_receive}, #{check_receive_rmb}, #{check_not_receive}, #{check_not_receive_rmb}, #{check_cash}, #{check_cheque}, #{check_billing}, 
+	#{report_typr}, #{report_courier}, #{report_other}, #{report_other_detail}, #{report_courier_addr}, #{report_num}, #{report_date}, 
+	#{entity_benzene}, #{entity_benzene_1}, #{entity_benzene_2}, #{entity_benzene_3}, #{entity_benzene_4}, 
+	#{entity_toluene}, #{entity_toluene_1}, #{entity_toluene_2}, 
+	#{entity_formal}, #{entity_formal_1}, #{entity_formal_2}, #{entity_formal_3}, 
+	#{entity_n}, #{entity_n_1}, #{entity_tvoc}, #{entity_tvoc_1}, #{entity_tvoc_2}, 
+	#{entity_rn}, #{entity_rn_1}, #{entity_rn_2}, #{entity_rn_3}, 
+	#{entity_o3}, #{entity_o3_1}, 
+	#{entity_so2}, #{entity_so2_1}, 
+	#{entity_no2}, #{entity_no2_1}, 
+	#{other}
+	)
+    </insert>
+</mapper>

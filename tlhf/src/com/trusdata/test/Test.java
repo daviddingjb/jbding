@@ -18,6 +18,7 @@ public class Test {
 		
 		System.out.println("tuopin123 " + MD5.MD5Encode("tuopin123"));
 		System.out.println("input     " + MD5.MD5Encode("input"));
+		System.out.println("tlhf      " + MD5.MD5Encode("tlhf"));
 		
 		System.out.println("UUID      " + UUID.randomUUID().toString());
 		System.out.println("UUID      " + UUID.randomUUID().toString().length());

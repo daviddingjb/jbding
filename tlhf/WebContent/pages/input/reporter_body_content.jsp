@@ -36,23 +36,23 @@
 		// 给分页信息添加相应事件，实现分页跳转
 		$("#reportlist_show_div").Page("#reportlist_init_form");
 
-		//给新增班级按钮添加点击事件，实现班级信息的新增
+		//给新增班级按钮添加点击事件，实现信息的新增
 		$("#btnNew").click(function() {
 			$( "#dialog" ).OpenDialog({title:"录入服务",width:1080}, "pact_toadd", "queryBean.pageIndex=<s:property value='queryBean.pageIndex'/>");
 		});
 
-		//给删除按钮添加点击事件，实现班级信息的删除
+		//给删除按钮添加点击事件，实现信息的删除
 		$("#linkDel").click(function() {
-			var serverName = $(this).attr("id");
+			var id = $(this).attr("id");
 			$("#dialog").MsgBox("是否确认删除该条信息？", function() {
-				$("#content").SubmitForm($("#reportlist_init_form"), "pact_del", {"queryBean.pageIndex":"<s:property value='queryBean.pageIndex'/>", "id1.id" : serverName});
+				$("#content").SubmitForm($("#reportlist_init_form"), "pact_del", {"queryBean.pageIndex":"<s:property value='queryBean.pageIndex'/>", "id1.id" : id});
 			});
 		});
 
-		//给修改添加点击事件，实现班级信息的 修改
+		//给修改添加点击事件，实现信息的 修改
 		$("#linkUpd").click(function() {
-			var serverName = $(this).attr("id");
-			$( "#dialog" ).OpenDialog({title:"编辑",width:1080}, "pact_updInit", {"queryBean.pageIndex":"<s:property value='queryBean.pageIndex'/>", "serverList.id" : serverName});
+			var id = $(this).attr("id");
+			$( "#dialog" ).OpenDialog({title:"编辑",width:1080}, "pact_updInit", {"queryBean.pageIndex":"<s:property value='queryBean.pageIndex'/>", "serverList.id" : id});
 		});
 	});
 </script>

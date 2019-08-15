@@ -4,12 +4,12 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/report.css">
 
 <div style="padding: 20px 20px 10px;" class="wrapper">
-	<s:form action="report_toadd" method="post">
+	<s:form action="pact_toadd" method="post">
 		<div class="con_center">
 			<h3>室内空气检测协议书</h3>
 		</div>
 		<div>
-			委托编号： <input type="text" name="indoor.id" id="id" class="width150">
+			委托编号： <input type="text" name="indoor.entrusted_id" id="entrusted_id" class="width150">
 		</div>
 		<div>
 			委托单位（盖章）：

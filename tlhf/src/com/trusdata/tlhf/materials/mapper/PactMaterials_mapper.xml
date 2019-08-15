@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trusdata.tlhf.materials.mapper.PactMaterialsMapper">
+	<resultMap id="BaseResultMap" type="com.trusdata.tlhf.materials.bean.PactMaterialsBean">
+  		<result property="id" column="id" jdbcType="VARCHAR"/>
+  		<result property="entrusted_id" column="entrusted_id" jdbcType="VARCHAR"/>
+  		<result property="input_name" column="input_name" jdbcType="VARCHAR"/>
+  		<result property="create_dt" column="create_dt" jdbcType="DATE"/>
+  		<result property="upd_name" column="upd_name" jdbcType="VARCHAR"/>
+  		<result property="upd_dt" column="upd_dt" jdbcType="DATE"/>
+		<result property="entrusted_chop" column="entrusted_chop" jdbcType="VARCHAR"/>
+		<result property="entrusted_signature" column="entrusted_signature" jdbcType="VARCHAR"/>
+		<result property="entrusted_date" column="entrusted_date" jdbcType="VARCHAR"/>
+		<result property="test_chop" column="test_chop" jdbcType="VARCHAR"/>
+		<result property="test_signature" column="test_signature" jdbcType="VARCHAR"/>
+		<result property="agent_date" column="agent_date" jdbcType="VARCHAR"/>
+		<result property="sign_date" column="sign_date" jdbcType="VARCHAR"/>
+		<result property="test_date" column="test_date" jdbcType="VARCHAR"/>
+		<result property="entrusted_owner" column="entrusted_owner" jdbcType="VARCHAR"/>
+		<result property="sample_date" column="sample_date" jdbcType="VARCHAR"/>
+		<result property="call_owner" column="call_owner" jdbcType="VARCHAR"/>
+		<result property="call_num" column="call_num" jdbcType="VARCHAR"/>
+		<result property="sample_name" column="sample_name" jdbcType="VARCHAR"/>
+		<result property="sample_size" column="sample_size" jdbcType="VARCHAR"/>
+		<result property="sample_level" column="sample_level" jdbcType="VARCHAR"/>
+		<result property="sample_num" column="sample_num" jdbcType="VARCHAR"/>
+		<result property="factory" column="factory" jdbcType="VARCHAR"/>
+		<result property="obj_name" column="obj_name" jdbcType="VARCHAR"/>
+		<result property="test_type_1" column="test_type_1" jdbcType="VARCHAR"/>
+		<result property="test_type_2" column="test_type_2" jdbcType="VARCHAR"/>
+		<result property="test_type_3" column="test_type_3" jdbcType="VARCHAR"/>
+		<result property="cost_1" column="cost_1" jdbcType="VARCHAR"/>
+		<result property="cost_2" column="cost_2" jdbcType="VARCHAR"/>
+		<result property="cost_3" column="cost_3" jdbcType="VARCHAR"/>
+		<result property="cost_4" column="cost_4" jdbcType="VARCHAR"/>
+		<result property="cost_5" column="cost_5" jdbcType="VARCHAR"/>
+		<result property="cost_6" column="cost_6" jdbcType="VARCHAR"/>
+		<result property="cost_7" column="cost_7" jdbcType="VARCHAR"/>
+		<result property="submit_1" column="submit_1" jdbcType="VARCHAR"/>
+		<result property="submit_2" column="submit_2" jdbcType="VARCHAR"/>
+		<result property="submit_3" column="submit_3" jdbcType="VARCHAR"/>
+		<result property="submit_4" column="submit_4" jdbcType="VARCHAR"/>
+		<result property="submit_5" column="submit_5" jdbcType="VARCHAR"/>
+		<result property="submit_6" column="submit_6" jdbcType="VARCHAR"/>
+		<result property="submit_7" column="submit_7" jdbcType="VARCHAR"/>
+		<result property="test_1" column="test_1" jdbcType="VARCHAR"/>
+		<result property="test1_way_1" column="test1_way_1" jdbcType="VARCHAR"/>
+		<result property="test_2" column="test_2" jdbcType="VARCHAR"/>
+		<result property="test2_way_1" column="test2_way_1" jdbcType="VARCHAR"/>
+		<result property="test2_way_2" column="test2_way_2" jdbcType="VARCHAR"/>
+		<result property="test_3" column="test_3" jdbcType="VARCHAR"/>
+		<result property="test3_way_1" column="test3_way_1" jdbcType="VARCHAR"/>
+		<result property="test3_way_2" column="test3_way_2" jdbcType="VARCHAR"/>
+		<result property="test_4" column="test_4" jdbcType="VARCHAR"/>
+		<result property="test4_way_1" column="test4_way_1" jdbcType="VARCHAR"/>
+		<result property="note" column="note" jdbcType="VARCHAR"/>
+		<result property="other" column="other" jdbcType="VARCHAR"/>
+	</resultMap>
+	<resultMap id="BaseResultMap1" type="com.trusdata.tlhf.pact.bean.PactInputListBean">
+		<result property="id1" column="id" jdbcType="VARCHAR" />
+		<result property="input_date" column="create_dt" jdbcType="VARCHAR" />
+		<result property="inputer" column="input_name" jdbcType="VARCHAR" />
+		<result property="call_way" column="call_way" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<!--查询条件 -->
+	<sql id="sqlCondition">
+		<![CDATA[
+			FROM tlhf.materials 
+			WHERE 1 = 1
+		]]>
+		<if test="t_work_user !=null and t_work_user != ''">
+			AND input_name = #{t_work_user}
+		</if>
+	</sql>
+	
+	<!-- 取得总数 -->
+	<select id="selectCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean">
+		SELECT count(0)
+		<include refid="sqlCondition" />
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="selectInfo" parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean"
+		resultMap="BaseResultMap1">
+		SELECT id, create_dt, input_name
+		<include refid="sqlCondition" />
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
+	
+    <delete id="del" parameterType="com.trusdata.tlhf.pact.bean.PactIdentifyBean" >
+		DELETE FROM tlhf.materials WHERE id = #{id1}
+    </delete>
+	
+    <insert id="insertMaterials" parameterType="com.trusdata.tlhf.materials.bean.PactMaterialsBean">
+	insert into tlhf.materials 
+	(id, entrusted_id, input_name, create_dt, upd_name, upd_dt, entrusted_chop, 
+	entrusted_signature, entrusted_date, test_chop, test_signature, agent_date, 
+	sign_date, test_date, entrusted_owner, sample_date, call_owner, call_num, 
+	sample_name, sample_size, sample_level, sample_num, factory, obj_name, 
+	test_type_1, test_type_2, test_type_3, cost_1, cost_2, cost_3, cost_4, cost_5, cost_6, cost_7, 
+	submit_1, submit_2, submit_3, submit_4, submit_5, submit_6, submit_7, test_1, test1_way_1, 
+	test_2, test2_way_1, test2_way_2, test_3, test3_way_1, test3_way_2, test_4, test4_way_1, 
+	note, other
+	)
+	values
+	(#{id}, #{entrusted_id}, #{input_name}, #{create_dt}, #{upd_name}, #{upd_dt}, #{entrusted_chop}, 
+	#{entrusted_signature}, #{entrusted_date}, #{test_chop}, #{test_signature}, #{agent_date}, 
+	#{sign_date}, #{test_date}, #{entrusted_owner}, #{sample_date}, #{call_owner}, #{call_num}, 
+	#{sample_name}, #{sample_size}, #{sample_level}, #{sample_num}, #{factory}, #{obj_name}, 
+	#{test_type_1}, #{test_type_2}, #{test_type_3}, #{cost_1}, #{cost_2}, #{cost_3}, #{cost_4}, #{cost_5}, #{cost_6}, #{cost_7}, 
+	#{submit_1}, #{submit_2}, #{submit_3}, #{submit_4}, #{submit_5}, #{submit_6}, #{submit_7}, #{test_1}, #{test1_way_1}, 
+	#{test_2}, #{test2_way_1}, #{test2_way_2}, #{test_3}, #{test3_way_1}, #{test3_way_2}, #{test_4}, #{test4_way_1}, 
+	#{note}, #{other}
+	)
+    </insert>
+</mapper>

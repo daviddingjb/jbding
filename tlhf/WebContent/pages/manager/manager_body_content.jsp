@@ -9,7 +9,7 @@
 			            </div>
 			            <div class="col-xs-6 pull-right" style="width: 40%;margin-right: 2%;">
 			                <button class="button-title" id="linkDel">删除</button>
-			                <button class="button-title" id="btnNew">录入</button>
+			                <button class="button-title" id="linkUpd">更新</button>
 			            </div>
 			        </div>
 			        <div class="row">
@@ -26,28 +26,21 @@
 											<thead>
 											<tr>
                                             	<th>选择</th>
-                                            	<th>年</th>
-												<th>县市</th>
-												<th>乡镇</th>
-												<th>村</th>
-												<th>组</th>
-												<th>户主姓名</th>
-												<th>评估总分</th>
+                                            	<th>工程名称</th>
+                                            	<th>委托编号</th>
+                                            	<th>委托时间</th>
 											</tr>
 											</thead>
 									
 											<tbody>
 											<s:iterator value="serverList" status="stat">
 												<tr style="background-color: #E9EFFA; height: 24px; color: black;">
-													<s:hidden name="id" value="%{id}" />
+													<s:hidden name="id" value="%{id1}" />
 													<td><s:checkbox name="number" fieldValue="%{#stat.index}"></s:checkbox></td>
-													<td><s:property value="year1" /></td>
-													<td><s:property value="county" /></td>
-													<td><s:property value="township" /></td>
-													<td><s:property value="village" /></td>
-													<td><s:property value="group1" /></td>
-													<td><s:property value="name1" /></td>
-													<td><s:property value="scope182" /></td>
+													<td><s:property value="obj_name" /></td>
+													<td><s:property value="entrusted_id" /></td>
+													<td><s:property value="entrusted_date" /></td>
+													<td><a href='manager_init'>查看详情</a></td>
 												</tr>
 											</s:iterator>
 											</tbody>

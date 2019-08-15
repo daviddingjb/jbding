@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trusdata.tlhf.tdatajn.mapper.PactTdataJnMapper">
+	<resultMap id="BaseResultMap" type="com.trusdata.tlhf.tdatajn.bean.PactTdataJnBean">
+		<result property="id" column="id" jdbcType="VARCHAR"/>
+  		<result property="entrusted_id" column="entrusted_id" jdbcType="VARCHAR"/>
+		<result property="entity_name" column="entity_name" jdbcType="VARCHAR"/>
+		<result property="input_name" column="input_name" jdbcType="VARCHAR"/>
+		<result property="create_dt" column="create_dt" jdbcType="DATE"/>
+		<result property="upd_name" column="upd_name" jdbcType="VARCHAR"/>
+		<result property="upd_dt" column="upd_dt" jdbcType="DATE"/>
+		<result property="sta_name" column="sta_name" jdbcType="VARCHAR"/>
+		<result property="sta_size" column="sta_size" jdbcType="VARCHAR"/>
+		<result property="sta_high" column="sta_high" jdbcType="VARCHAR"/>
+		<result property="sta_length" column="sta_length" jdbcType="VARCHAR"/>
+		<result property="sta_value_1" column="sta_value_1" jdbcType="VARCHAR"/>
+		<result property="sta_value_2" column="sta_value_2" jdbcType="VARCHAR"/>
+		<result property="sta_value_3" column="sta_value_3" jdbcType="VARCHAR"/>
+		<result property="sta_value_4" column="sta_value_4" jdbcType="VARCHAR"/>
+		<result property="sta_value_5" column="sta_value_5" jdbcType="VARCHAR"/>
+		<result property="sta_value_6" column="sta_value_6" jdbcType="VARCHAR"/>
+		<result property="sta_value_7" column="sta_value_7" jdbcType="VARCHAR"/>
+		<result property="sta_value_8" column="sta_value_8" jdbcType="VARCHAR"/>
+		<result property="sta_value_9" column="sta_value_9" jdbcType="VARCHAR"/>
+		<result property="sta_value_10" column="sta_value_10" jdbcType="VARCHAR"/>
+		<result property="sta_value_11" column="sta_value_11" jdbcType="VARCHAR"/>
+		<result property="sta_value_12" column="sta_value_12" jdbcType="VARCHAR"/>
+		<result property="sta_value_13" column="sta_value_13" jdbcType="VARCHAR"/>
+		<result property="sta_value_14" column="sta_value_14" jdbcType="VARCHAR"/>
+		<result property="sta_value_15" column="sta_value_15" jdbcType="VARCHAR"/>
+		<result property="sta_value_16" column="sta_value_16" jdbcType="VARCHAR"/>
+		<result property="sta_value_17" column="sta_value_17" jdbcType="VARCHAR"/>
+		<result property="sta_value_18" column="sta_value_18" jdbcType="VARCHAR"/>
+		<result property="sta_value_19" column="sta_value_19" jdbcType="VARCHAR"/>
+		<result property="sta_value_20" column="sta_value_20" jdbcType="VARCHAR"/>
+		<result property="sta_value_21" column="sta_value_21" jdbcType="VARCHAR"/>
+		<result property="sta_value_22" column="sta_value_22" jdbcType="VARCHAR"/>
+		<result property="sta_value_23" column="sta_value_23" jdbcType="VARCHAR"/>
+		<result property="sta_value_24" column="sta_value_24" jdbcType="VARCHAR"/>
+		<result property="sta_value_25" column="sta_value_25" jdbcType="VARCHAR"/>
+		<result property="sta_value_26" column="sta_value_26" jdbcType="VARCHAR"/>
+		<result property="sta_value_27" column="sta_value_27" jdbcType="VARCHAR"/>
+		<result property="sta_value_28" column="sta_value_28" jdbcType="VARCHAR"/>
+		<result property="sta_value_29" column="sta_value_29" jdbcType="VARCHAR"/>
+		<result property="sta_value_30" column="sta_value_30" jdbcType="VARCHAR"/>
+		<result property="sta_value_31" column="sta_value_31" jdbcType="VARCHAR"/>
+		<result property="sta_value_32" column="sta_value_32" jdbcType="VARCHAR"/>
+		<result property="sta_value_33" column="sta_value_33" jdbcType="VARCHAR"/>
+		<result property="sta_value_34" column="sta_value_34" jdbcType="VARCHAR"/>
+		<result property="sta_value_35" column="sta_value_35" jdbcType="VARCHAR"/>
+		<result property="sta_value_36" column="sta_value_36" jdbcType="VARCHAR"/>
+		<result property="sta_value_37" column="sta_value_37" jdbcType="VARCHAR"/>
+		<result property="sta_value_38" column="sta_value_38" jdbcType="VARCHAR"/>
+		<result property="sta_value_39" column="sta_value_39" jdbcType="VARCHAR"/>
+		<result property="sta_value_40" column="sta_value_40" jdbcType="VARCHAR"/>
+		<result property="sta_value_41" column="sta_value_41" jdbcType="VARCHAR"/>
+		<result property="sta_value_42" column="sta_value_42" jdbcType="VARCHAR"/>
+		<result property="sta_value_43" column="sta_value_43" jdbcType="VARCHAR"/>
+		<result property="sta_value_44" column="sta_value_44" jdbcType="VARCHAR"/>
+		<result property="sta_value_45" column="sta_value_45" jdbcType="VARCHAR"/>
+		<result property="sta_value_46" column="sta_value_46" jdbcType="VARCHAR"/>
+		<result property="sta_value_47" column="sta_value_47" jdbcType="VARCHAR"/>
+		<result property="sta_value_48" column="sta_value_48" jdbcType="VARCHAR"/>
+		<result property="sta_value_49" column="sta_value_49" jdbcType="VARCHAR"/>
+		<result property="sta_value_50" column="sta_value_50" jdbcType="VARCHAR"/>
+		<result property="sta_value_51" column="sta_value_51" jdbcType="VARCHAR"/>
+		<result property="sta_value_52" column="sta_value_52" jdbcType="VARCHAR"/>
+		<result property="sta_value_53" column="sta_value_53" jdbcType="VARCHAR"/>
+		<result property="sta_value_54" column="sta_value_54" jdbcType="VARCHAR"/>
+		<result property="sta_value_55" column="sta_value_55" jdbcType="VARCHAR"/>
+		<result property="sta_value_56" column="sta_value_56" jdbcType="VARCHAR"/>
+		<result property="sta_value_57" column="sta_value_57" jdbcType="VARCHAR"/>
+		<result property="sta_value_58" column="sta_value_58" jdbcType="VARCHAR"/>
+		<result property="sta_value_59" column="sta_value_59" jdbcType="VARCHAR"/>
+		<result property="sta_value_60" column="sta_value_60" jdbcType="VARCHAR"/>
+		<result property="sta_value_61" column="sta_value_61" jdbcType="VARCHAR"/>
+		<result property="sta_value_62" column="sta_value_62" jdbcType="VARCHAR"/>
+		<result property="sta_value_63" column="sta_value_63" jdbcType="VARCHAR"/>
+		<result property="sta_value_64" column="sta_value_64" jdbcType="VARCHAR"/>
+		<result property="sta_value_65" column="sta_value_65" jdbcType="VARCHAR"/>
+		<result property="sta_value_66" column="sta_value_66" jdbcType="VARCHAR"/>
+		<result property="sta_value_67" column="sta_value_67" jdbcType="VARCHAR"/>
+		<result property="sta_value_68" column="sta_value_68" jdbcType="VARCHAR"/>
+		<result property="sta_value_69" column="sta_value_69" jdbcType="VARCHAR"/>
+		<result property="sta_value_70" column="sta_value_70" jdbcType="VARCHAR"/>
+		<result property="sta_value_71" column="sta_value_71" jdbcType="VARCHAR"/>
+		<result property="sta_value_72" column="sta_value_72" jdbcType="VARCHAR"/>
+		<result property="sta_value_73" column="sta_value_73" jdbcType="VARCHAR"/>
+		<result property="sta_value_74" column="sta_value_74" jdbcType="VARCHAR"/>
+		<result property="sta_value_75" column="sta_value_75" jdbcType="VARCHAR"/>
+		<result property="sta_value_76" column="sta_value_76" jdbcType="VARCHAR"/>
+		<result property="sta_value_77" column="sta_value_77" jdbcType="VARCHAR"/>
+		<result property="sta_value_78" column="sta_value_78" jdbcType="VARCHAR"/>
+		<result property="sta_value_79" column="sta_value_79" jdbcType="VARCHAR"/>
+		<result property="sta_value_80" column="sta_value_80" jdbcType="VARCHAR"/>
+		<result property="sta_value_81" column="sta_value_81" jdbcType="VARCHAR"/>
+		<result property="sta_value_82" column="sta_value_82" jdbcType="VARCHAR"/>
+		<result property="sta_value_83" column="sta_value_83" jdbcType="VARCHAR"/>
+		<result property="sta_value_84" column="sta_value_84" jdbcType="VARCHAR"/>
+		<result property="sta_value_85" column="sta_value_85" jdbcType="VARCHAR"/>
+		<result property="sta_value_86" column="sta_value_86" jdbcType="VARCHAR"/>
+		<result property="sta_value_87" column="sta_value_87" jdbcType="VARCHAR"/>
+		<result property="sta_value_88" column="sta_value_88" jdbcType="VARCHAR"/>
+		<result property="sta_value_89" column="sta_value_89" jdbcType="VARCHAR"/>
+		<result property="sta_value_90" column="sta_value_90" jdbcType="VARCHAR"/>
+		<result property="sta_value_91" column="sta_value_91" jdbcType="VARCHAR"/>
+		<result property="sta_value_92" column="sta_value_92" jdbcType="VARCHAR"/>
+		<result property="sta_value_93" column="sta_value_93" jdbcType="VARCHAR"/>
+		<result property="sta_value_94" column="sta_value_94" jdbcType="VARCHAR"/>
+		<result property="sta_value_95" column="sta_value_95" jdbcType="VARCHAR"/>
+		<result property="sta_value_96" column="sta_value_96" jdbcType="VARCHAR"/>
+		<result property="sta_value_97" column="sta_value_97" jdbcType="VARCHAR"/>
+		<result property="sta_value_98" column="sta_value_98" jdbcType="VARCHAR"/>
+		<result property="sta_value_99" column="sta_value_99" jdbcType="VARCHAR"/>
+		<result property="sta_value_100" column="sta_value_100" jdbcType="VARCHAR"/>
+		<result property="sta_value_101" column="sta_value_101" jdbcType="VARCHAR"/>
+		<result property="sta_value_102" column="sta_value_102" jdbcType="VARCHAR"/>
+		<result property="sta_value_103" column="sta_value_103" jdbcType="VARCHAR"/>
+		<result property="sta_value_104" column="sta_value_104" jdbcType="VARCHAR"/>
+		<result property="sta_value_105" column="sta_value_105" jdbcType="VARCHAR"/>
+		<result property="sta_value_106" column="sta_value_106" jdbcType="VARCHAR"/>
+		<result property="sta_value_107" column="sta_value_107" jdbcType="VARCHAR"/>
+		<result property="sta_value_108" column="sta_value_108" jdbcType="VARCHAR"/>
+		<result property="sta_value_109" column="sta_value_109" jdbcType="VARCHAR"/>
+		<result property="sta_value_110" column="sta_value_110" jdbcType="VARCHAR"/>
+		<result property="sta_value_111" column="sta_value_111" jdbcType="VARCHAR"/>
+		<result property="sta_value_112" column="sta_value_112" jdbcType="VARCHAR"/>
+		<result property="sta_value_113" column="sta_value_113" jdbcType="VARCHAR"/>
+		<result property="sta_value_114" column="sta_value_114" jdbcType="VARCHAR"/>
+		<result property="sta_value_115" column="sta_value_115" jdbcType="VARCHAR"/>
+		<result property="sta_value_116" column="sta_value_116" jdbcType="VARCHAR"/>
+		<result property="sta_value_117" column="sta_value_117" jdbcType="VARCHAR"/>
+		<result property="sta_value_118" column="sta_value_118" jdbcType="VARCHAR"/>
+		<result property="sta_value_119" column="sta_value_119" jdbcType="VARCHAR"/>
+		<result property="sta_value_120" column="sta_value_120" jdbcType="VARCHAR"/>
+		<result property="sta_avg_value" column="sta_avg_value" jdbcType="VARCHAR"/>
+		<result property="sta_des_value" column="sta_des_value" jdbcType="VARCHAR"/>
+		<result property="sta_bias" column="sta_bias" jdbcType="VARCHAR"/>
+		<result property="sta_electricity" column="sta_electricity" jdbcType="VARCHAR"/>
+		<result property="sta_diany" column="sta_diany" jdbcType="VARCHAR"/>
+		<result property="sta_act_value" column="sta_act_value" jdbcType="VARCHAR"/>
+		<result property="sta_wm2_value" column="sta_wm2_value" jdbcType="VARCHAR"/>
+	</resultMap>
+	<resultMap id="BaseResultMap1" type="com.trusdata.tlhf.pact.bean.PactInputListBean">
+		<result property="id1" column="id" jdbcType="VARCHAR" />
+		<result property="input_date" column="create_dt" jdbcType="VARCHAR" />
+		<result property="inputer" column="input_name" jdbcType="VARCHAR" />
+		<result property="call_way" column="call_way" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<!--查询条件 -->
+	<sql id="sqlCondition">
+		<![CDATA[
+			FROM tlhf.tdatajn 
+			WHERE 1 = 1
+		]]>
+		<if test="t_work_user !=null and t_work_user != ''">
+			AND input_name = #{t_work_user}
+		</if>
+	</sql>
+	
+	<!-- 取得总数 -->
+	<select id="selectCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean">
+		SELECT count(0)
+		<include refid="sqlCondition" />
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="selectInfo" parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean"
+		resultMap="BaseResultMap1">
+		SELECT id, create_dt, input_name
+		<include refid="sqlCondition" />
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
+	
+    <delete id="del" parameterType="com.trusdata.tlhf.pact.bean.PactIdentifyBean" >
+		DELETE FROM tlhf.tdatajn WHERE id = #{id1}
+    </delete>
+	
+    <insert id="insertTdataJn" parameterType="com.trusdata.tlhf.tdatajn.bean.PactTdataJnBean">
+	insert into tlhf.tdatajn 
+	(id, entrusted_id, entity_name, input_name, create_dt, upd_name, upd_dt, sta_name, sta_size, sta_high, sta_length, 
+	sta_value_1, sta_value_2, sta_value_3, sta_value_4, sta_value_5, sta_value_6, sta_value_7, sta_value_8, sta_value_9, sta_value_10, 
+	sta_value_11, sta_value_12, sta_value_13, sta_value_14, sta_value_15, sta_value_16, sta_value_17, sta_value_18, sta_value_19, sta_value_20, 
+	sta_value_21, sta_value_22, sta_value_23, sta_value_24, sta_value_25, sta_value_26, sta_value_27, sta_value_28, sta_value_29, sta_value_30, 
+	sta_value_31, sta_value_32, sta_value_33, sta_value_34, sta_value_35, sta_value_36, sta_value_37, sta_value_38, sta_value_39, sta_value_40, 
+	sta_value_41, sta_value_42, sta_value_43, sta_value_44, sta_value_45, sta_value_46, sta_value_47, sta_value_48, sta_value_49, sta_value_50, 
+	sta_value_51, sta_value_52, sta_value_53, sta_value_54, sta_value_55, sta_value_56, sta_value_57, sta_value_58, sta_value_59, sta_value_60, 
+	sta_value_61, sta_value_62, sta_value_63, sta_value_64, sta_value_65, sta_value_66, sta_value_67, sta_value_68, sta_value_69, sta_value_70, 
+	sta_value_71, sta_value_72, sta_value_73, sta_value_74, sta_value_75, sta_value_76, sta_value_77, sta_value_78, sta_value_79, sta_value_80, 
+	sta_value_81, sta_value_82, sta_value_83, sta_value_84, sta_value_85, sta_value_86, sta_value_87, sta_value_88, sta_value_89, sta_value_90, 
+	sta_value_91, sta_value_92, sta_value_93, sta_value_94, sta_value_95, sta_value_96, sta_value_97, sta_value_98, sta_value_99, sta_value_100, 
+	sta_value_101, sta_value_102, sta_value_103, sta_value_104, sta_value_105, sta_value_106, sta_value_107, sta_value_108, sta_value_109, sta_value_110, 
+	sta_value_111, sta_value_112, sta_value_113, sta_value_114, sta_value_115, sta_value_116, sta_value_117, sta_value_118, sta_value_119, sta_value_120, 
+	sta_avg_value, sta_des_value, sta_bias, sta_electricity, sta_diany, sta_act_value, sta_wm2_value
+	)
+	values
+	(#{id}, #{entrusted_id}, #{entity_name}, #{input_name}, #{create_dt}, #{upd_name}, #{upd_dt}, #{sta_name}, #{sta_size}, #{sta_high}, #{sta_length}, 
+	#{sta_value_1}, #{sta_value_2}, #{sta_value_3}, #{sta_value_4}, #{sta_value_5}, #{sta_value_6}, #{sta_value_7}, #{sta_value_8}, #{sta_value_9}, #{sta_value_10}, 
+	#{sta_value_11}, #{sta_value_12}, #{sta_value_13}, #{sta_value_14}, #{sta_value_15}, #{sta_value_16}, #{sta_value_17}, #{sta_value_18}, #{sta_value_19}, #{sta_value_20}, 
+	#{sta_value_21}, #{sta_value_22}, #{sta_value_23}, #{sta_value_24}, #{sta_value_25}, #{sta_value_26}, #{sta_value_27}, #{sta_value_28}, #{sta_value_29}, #{sta_value_30}, 
+	#{sta_value_31}, #{sta_value_32}, #{sta_value_33}, #{sta_value_34}, #{sta_value_35}, #{sta_value_36}, #{sta_value_37}, #{sta_value_38}, #{sta_value_39}, #{sta_value_40}, 
+	#{sta_value_41}, #{sta_value_42}, #{sta_value_43}, #{sta_value_44}, #{sta_value_45}, #{sta_value_46}, #{sta_value_47}, #{sta_value_48}, #{sta_value_49}, #{sta_value_50}, 
+	#{sta_value_51}, #{sta_value_52}, #{sta_value_53}, #{sta_value_54}, #{sta_value_55}, #{sta_value_56}, #{sta_value_57}, #{sta_value_58}, #{sta_value_59}, #{sta_value_60}, 
+	#{sta_value_61}, #{sta_value_62}, #{sta_value_63}, #{sta_value_64}, #{sta_value_65}, #{sta_value_66}, #{sta_value_67}, #{sta_value_68}, #{sta_value_69}, #{sta_value_70}, 
+	#{sta_value_71}, #{sta_value_72}, #{sta_value_73}, #{sta_value_74}, #{sta_value_75}, #{sta_value_76}, #{sta_value_77}, #{sta_value_78}, #{sta_value_79}, #{sta_value_80}, 
+	#{sta_value_81}, #{sta_value_82}, #{sta_value_83}, #{sta_value_84}, #{sta_value_85}, #{sta_value_86}, #{sta_value_87}, #{sta_value_88}, #{sta_value_89}, #{sta_value_90}, 
+	#{sta_value_91}, #{sta_value_92}, #{sta_value_93}, #{sta_value_94}, #{sta_value_95}, #{sta_value_96}, #{sta_value_97}, #{sta_value_98}, #{sta_value_99}, #{sta_value_100}, 
+	#{sta_value_101}, #{sta_value_102}, #{sta_value_103}, #{sta_value_104}, #{sta_value_105}, #{sta_value_106}, #{sta_value_107}, #{sta_value_108}, #{sta_value_109}, #{sta_value_110}, 
+	#{sta_value_111}, #{sta_value_112}, #{sta_value_113}, #{sta_value_114}, #{sta_value_115}, #{sta_value_116}, #{sta_value_117}, #{sta_value_118}, #{sta_value_119}, #{sta_value_120}, 
+	#{sta_avg_value}, #{sta_des_value}, #{sta_bias}, #{sta_electricity}, #{sta_diany}, #{sta_act_value}, #{sta_wm2_value}
+	)
+    </insert>
+</mapper>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trusdata.tlhf.tdata.mapper.PactTdataMapper">
+	<resultMap id="BaseResultMap" type="com.trusdata.tlhf.tdata.bean.PactTdataBean">
+		<result property="id" column="id" jdbcType="VARCHAR"/>
+  		<result property="entrusted_id" column="entrusted_id" jdbcType="VARCHAR"/>
+		<result property="entity_name" column="entity_name" jdbcType="VARCHAR"/>
+		<result property="input_name" column="input_name" jdbcType="VARCHAR"/>
+		<result property="create_dt" column="create_dt" jdbcType="DATE"/>
+		<result property="upd_name" column="upd_name" jdbcType="VARCHAR"/>
+		<result property="upd_dt" column="upd_dt" jdbcType="DATE"/>
+		<result property="sta_1_name" column="sta_1_name" jdbcType="VARCHAR"/>
+		<result property="sta_1_xibei" column="sta_1_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_1_xinan" column="sta_1_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_1_zjian" column="sta_1_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_1_donan" column="sta_1_donan" jdbcType="VARCHAR"/>
+		<result property="sta_1_dobei" column="sta_1_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_2_name" column="sta_2_name" jdbcType="VARCHAR"/>
+		<result property="sta_2_xibei" column="sta_2_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_2_xinan" column="sta_2_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_2_zjian" column="sta_2_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_2_donan" column="sta_2_donan" jdbcType="VARCHAR"/>
+		<result property="sta_2_dobei" column="sta_2_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_3_name" column="sta_3_name" jdbcType="VARCHAR"/>
+		<result property="sta_3_xibei" column="sta_3_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_3_xinan" column="sta_3_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_3_zjian" column="sta_3_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_3_donan" column="sta_3_donan" jdbcType="VARCHAR"/>
+		<result property="sta_3_dobei" column="sta_3_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_4_name" column="sta_4_name" jdbcType="VARCHAR"/>
+		<result property="sta_4_xibei" column="sta_4_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_4_xinan" column="sta_4_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_4_zjian" column="sta_4_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_4_donan" column="sta_4_donan" jdbcType="VARCHAR"/>
+		<result property="sta_4_dobei" column="sta_4_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_5_name" column="sta_5_name" jdbcType="VARCHAR"/>
+		<result property="sta_5_xibei" column="sta_5_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_5_xinan" column="sta_5_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_5_zjian" column="sta_5_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_5_donan" column="sta_5_donan" jdbcType="VARCHAR"/>
+		<result property="sta_5_dobei" column="sta_5_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_6_name" column="sta_6_name" jdbcType="VARCHAR"/>
+		<result property="sta_6_xibei" column="sta_6_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_6_xinan" column="sta_6_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_6_zjian" column="sta_6_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_6_donan" column="sta_6_donan" jdbcType="VARCHAR"/>
+		<result property="sta_6_dobei" column="sta_6_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_7_name" column="sta_7_name" jdbcType="VARCHAR"/>
+		<result property="sta_7_xibei" column="sta_7_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_7_xinan" column="sta_7_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_7_zjian" column="sta_7_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_7_donan" column="sta_7_donan" jdbcType="VARCHAR"/>
+		<result property="sta_7_dobei" column="sta_7_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_8_name" column="sta_8_name" jdbcType="VARCHAR"/>
+		<result property="sta_8_xibei" column="sta_8_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_8_xinan" column="sta_8_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_8_zjian" column="sta_8_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_8_donan" column="sta_8_donan" jdbcType="VARCHAR"/>
+		<result property="sta_8_dobei" column="sta_8_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_9_name" column="sta_9_name" jdbcType="VARCHAR"/>
+		<result property="sta_9_xibei" column="sta_9_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_9_xinan" column="sta_9_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_9_zjian" column="sta_9_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_9_donan" column="sta_9_donan" jdbcType="VARCHAR"/>
+		<result property="sta_9_dobei" column="sta_9_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_10_name" column="sta_10_name" jdbcType="VARCHAR"/>
+		<result property="sta_10_xibei" column="sta_10_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_10_xinan" column="sta_10_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_10_zjian" column="sta_10_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_10_donan" column="sta_10_donan" jdbcType="VARCHAR"/>
+		<result property="sta_10_dobei" column="sta_10_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_11_name" column="sta_11_name" jdbcType="VARCHAR"/>
+		<result property="sta_11_xibei" column="sta_11_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_11_xinan" column="sta_11_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_11_zjian" column="sta_11_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_11_donan" column="sta_11_donan" jdbcType="VARCHAR"/>
+		<result property="sta_11_dobei" column="sta_11_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_12_name" column="sta_12_name" jdbcType="VARCHAR"/>
+		<result property="sta_12_xibei" column="sta_12_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_12_xinan" column="sta_12_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_12_zjian" column="sta_12_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_12_donan" column="sta_12_donan" jdbcType="VARCHAR"/>
+		<result property="sta_12_dobei" column="sta_12_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_13_name" column="sta_13_name" jdbcType="VARCHAR"/>
+		<result property="sta_13_xibei" column="sta_13_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_13_xinan" column="sta_13_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_13_zjian" column="sta_13_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_13_donan" column="sta_13_donan" jdbcType="VARCHAR"/>
+		<result property="sta_13_dobei" column="sta_13_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_14_name" column="sta_14_name" jdbcType="VARCHAR"/>
+		<result property="sta_14_xibei" column="sta_14_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_14_xinan" column="sta_14_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_14_zjian" column="sta_14_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_14_donan" column="sta_14_donan" jdbcType="VARCHAR"/>
+		<result property="sta_14_dobei" column="sta_14_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_15_name" column="sta_15_name" jdbcType="VARCHAR"/>
+		<result property="sta_15_xibei" column="sta_15_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_15_xinan" column="sta_15_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_15_zjian" column="sta_15_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_15_donan" column="sta_15_donan" jdbcType="VARCHAR"/>
+		<result property="sta_15_dobei" column="sta_15_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_16_name" column="sta_16_name" jdbcType="VARCHAR"/>
+		<result property="sta_16_xibei" column="sta_16_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_16_xinan" column="sta_16_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_16_zjian" column="sta_16_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_16_donan" column="sta_16_donan" jdbcType="VARCHAR"/>
+		<result property="sta_16_dobei" column="sta_16_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_17_name" column="sta_17_name" jdbcType="VARCHAR"/>
+		<result property="sta_17_xibei" column="sta_17_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_17_xinan" column="sta_17_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_17_zjian" column="sta_17_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_17_donan" column="sta_17_donan" jdbcType="VARCHAR"/>
+		<result property="sta_17_dobei" column="sta_17_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_18_name" column="sta_18_name" jdbcType="VARCHAR"/>
+		<result property="sta_18_xibei" column="sta_18_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_18_xinan" column="sta_18_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_18_zjian" column="sta_18_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_18_donan" column="sta_18_donan" jdbcType="VARCHAR"/>
+		<result property="sta_18_dobei" column="sta_18_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_19_name" column="sta_19_name" jdbcType="VARCHAR"/>
+		<result property="sta_19_xibei" column="sta_19_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_19_xinan" column="sta_19_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_19_zjian" column="sta_19_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_19_donan" column="sta_19_donan" jdbcType="VARCHAR"/>
+		<result property="sta_19_dobei" column="sta_19_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_20_name" column="sta_20_name" jdbcType="VARCHAR"/>
+		<result property="sta_20_xibei" column="sta_20_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_20_xinan" column="sta_20_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_20_zjian" column="sta_20_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_20_donan" column="sta_20_donan" jdbcType="VARCHAR"/>
+		<result property="sta_20_dobei" column="sta_20_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_21_name" column="sta_21_name" jdbcType="VARCHAR"/>
+		<result property="sta_21_xibei" column="sta_21_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_21_xinan" column="sta_21_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_21_zjian" column="sta_21_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_21_donan" column="sta_21_donan" jdbcType="VARCHAR"/>
+		<result property="sta_21_dobei" column="sta_21_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_22_name" column="sta_22_name" jdbcType="VARCHAR"/>
+		<result property="sta_22_xibei" column="sta_22_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_22_xinan" column="sta_22_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_22_zjian" column="sta_22_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_22_donan" column="sta_22_donan" jdbcType="VARCHAR"/>
+		<result property="sta_22_dobei" column="sta_22_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_23_name" column="sta_23_name" jdbcType="VARCHAR"/>
+		<result property="sta_23_xibei" column="sta_23_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_23_xinan" column="sta_23_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_23_zjian" column="sta_23_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_23_donan" column="sta_23_donan" jdbcType="VARCHAR"/>
+		<result property="sta_23_dobei" column="sta_23_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_24_name" column="sta_24_name" jdbcType="VARCHAR"/>
+		<result property="sta_24_xibei" column="sta_24_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_24_xinan" column="sta_24_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_24_zjian" column="sta_24_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_24_donan" column="sta_24_donan" jdbcType="VARCHAR"/>
+		<result property="sta_24_dobei" column="sta_24_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_25_name" column="sta_25_name" jdbcType="VARCHAR"/>
+		<result property="sta_25_xibei" column="sta_25_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_25_xinan" column="sta_25_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_25_zjian" column="sta_25_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_25_donan" column="sta_25_donan" jdbcType="VARCHAR"/>
+		<result property="sta_25_dobei" column="sta_25_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_26_name" column="sta_26_name" jdbcType="VARCHAR"/>
+		<result property="sta_26_xibei" column="sta_26_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_26_xinan" column="sta_26_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_26_zjian" column="sta_26_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_26_donan" column="sta_26_donan" jdbcType="VARCHAR"/>
+		<result property="sta_26_dobei" column="sta_26_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_27_name" column="sta_27_name" jdbcType="VARCHAR"/>
+		<result property="sta_27_xibei" column="sta_27_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_27_xinan" column="sta_27_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_27_zjian" column="sta_27_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_27_donan" column="sta_27_donan" jdbcType="VARCHAR"/>
+		<result property="sta_27_dobei" column="sta_27_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_28_name" column="sta_28_name" jdbcType="VARCHAR"/>
+		<result property="sta_28_xibei" column="sta_28_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_28_xinan" column="sta_28_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_28_zjian" column="sta_28_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_28_donan" column="sta_28_donan" jdbcType="VARCHAR"/>
+		<result property="sta_28_dobei" column="sta_28_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_29_name" column="sta_29_name" jdbcType="VARCHAR"/>
+		<result property="sta_29_xibei" column="sta_29_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_29_xinan" column="sta_29_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_29_zjian" column="sta_29_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_29_donan" column="sta_29_donan" jdbcType="VARCHAR"/>
+		<result property="sta_29_dobei" column="sta_29_dobei" jdbcType="VARCHAR"/>
+		<result property="sta_30_name" column="sta_30_name" jdbcType="VARCHAR"/>
+		<result property="sta_30_xibei" column="sta_30_xibei" jdbcType="VARCHAR"/>
+		<result property="sta_30_xinan" column="sta_30_xinan" jdbcType="VARCHAR"/>
+		<result property="sta_30_zjian" column="sta_30_zjian" jdbcType="VARCHAR"/>
+		<result property="sta_30_donan" column="sta_30_donan" jdbcType="VARCHAR"/>
+		<result property="sta_30_dobei" column="sta_30_dobei" jdbcType="VARCHAR"/>
+	</resultMap>
+	<resultMap id="BaseResultMap1" type="com.trusdata.tlhf.pact.bean.PactInputListBean">
+		<result property="id1" column="id" jdbcType="VARCHAR" />
+		<result property="input_date" column="create_dt" jdbcType="VARCHAR" />
+		<result property="inputer" column="input_name" jdbcType="VARCHAR" />
+		<result property="call_way" column="call_way" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<!--查询条件 -->
+	<sql id="sqlCondition">
+		<![CDATA[
+			FROM tlhf.tdata 
+			WHERE 1 = 1
+		]]>
+		<if test="t_work_user !=null and t_work_user != ''">
+			AND input_name = #{t_work_user}
+		</if>
+	</sql>
+	
+	<!-- 取得总数 -->
+	<select id="selectCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean">
+		SELECT count(0)
+		<include refid="sqlCondition" />
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="selectInfo" parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean"
+		resultMap="BaseResultMap1">
+		SELECT id, create_dt, input_name
+		<include refid="sqlCondition" />
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
+	
+    <delete id="del" parameterType="com.trusdata.tlhf.pact.bean.PactIdentifyBean" >
+		DELETE FROM tlhf.tdata WHERE id = #{id1}
+    </delete>
+	
+    <insert id="insertTdata" parameterType="com.trusdata.tlhf.tdata.bean.PactTdataBean">
+	insert into tlhf.tdata 
+	(id, entrusted_id, entity_name, input_name, create_dt, upd_name, upd_dt, 
+	sta_1_name, sta_1_xibei, sta_1_xinan, sta_1_zjian, sta_1_donan, sta_1_dobei, 
+	sta_2_name, sta_2_xibei, sta_2_xinan, sta_2_zjian, sta_2_donan, sta_2_dobei, 
+	sta_3_name, sta_3_xibei, sta_3_xinan, sta_3_zjian, sta_3_donan, sta_3_dobei, 
+	sta_4_name, sta_4_xibei, sta_4_xinan, sta_4_zjian, sta_4_donan, sta_4_dobei, 
+	sta_5_name, sta_5_xibei, sta_5_xinan, sta_5_zjian, sta_5_donan, sta_5_dobei, 
+	sta_6_name, sta_6_xibei, sta_6_xinan, sta_6_zjian, sta_6_donan, sta_6_dobei, 
+	sta_7_name, sta_7_xibei, sta_7_xinan, sta_7_zjian, sta_7_donan, sta_7_dobei, 
+	sta_8_name, sta_8_xibei, sta_8_xinan, sta_8_zjian, sta_8_donan, sta_8_dobei, 
+	sta_9_name, sta_9_xibei, sta_9_xinan, sta_9_zjian, sta_9_donan, sta_9_dobei, 
+	sta_10_name, sta_10_xibei, sta_10_xinan, sta_10_zjian, sta_10_donan, sta_10_dobei, 
+	sta_11_name, sta_11_xibei, sta_11_xinan, sta_11_zjian, sta_11_donan, sta_11_dobei, 
+	sta_12_name, sta_12_xibei, sta_12_xinan, sta_12_zjian, sta_12_donan, sta_12_dobei, 
+	sta_13_name, sta_13_xibei, sta_13_xinan, sta_13_zjian, sta_13_donan, sta_13_dobei, 
+	sta_14_name, sta_14_xibei, sta_14_xinan, sta_14_zjian, sta_14_donan, sta_14_dobei, 
+	sta_15_name, sta_15_xibei, sta_15_xinan, sta_15_zjian, sta_15_donan, sta_15_dobei, 
+	sta_16_name, sta_16_xibei, sta_16_xinan, sta_16_zjian, sta_16_donan, sta_16_dobei, 
+	sta_17_name, sta_17_xibei, sta_17_xinan, sta_17_zjian, sta_17_donan, sta_17_dobei, 
+	sta_18_name, sta_18_xibei, sta_18_xinan, sta_18_zjian, sta_18_donan, sta_18_dobei, 
+	sta_19_name, sta_19_xibei, sta_19_xinan, sta_19_zjian, sta_19_donan, sta_19_dobei, 
+	sta_20_name, sta_20_xibei, sta_20_xinan, sta_20_zjian, sta_20_donan, sta_20_dobei, 
+	sta_21_name, sta_21_xibei, sta_21_xinan, sta_21_zjian, sta_21_donan, sta_21_dobei, 
+	sta_22_name, sta_22_xibei, sta_22_xinan, sta_22_zjian, sta_22_donan, sta_22_dobei, 
+	sta_23_name, sta_23_xibei, sta_23_xinan, sta_23_zjian, sta_23_donan, sta_23_dobei, 
+	sta_24_name, sta_24_xibei, sta_24_xinan, sta_24_zjian, sta_24_donan, sta_24_dobei, 
+	sta_25_name, sta_25_xibei, sta_25_xinan, sta_25_zjian, sta_25_donan, sta_25_dobei, 
+	sta_26_name, sta_26_xibei, sta_26_xinan, sta_26_zjian, sta_26_donan, sta_26_dobei, 
+	sta_27_name, sta_27_xibei, sta_27_xinan, sta_27_zjian, sta_27_donan, sta_27_dobei, 
+	sta_28_name, sta_28_xibei, sta_28_xinan, sta_28_zjian, sta_28_donan, sta_28_dobei, 
+	sta_29_name, sta_29_xibei, sta_29_xinan, sta_29_zjian, sta_29_donan, sta_29_dobei, 
+	sta_30_name, sta_30_xibei, sta_30_xinan, sta_30_zjian, sta_30_donan, sta_30_dobei
+	)
+	values
+	(#{id}, #{entrusted_id}, #{entity_name}, #{input_name}, #{create_dt}, #{upd_name}, #{upd_dt}, 
+	#{sta_1_name}, #{sta_1_xibei}, #{sta_1_xinan}, #{sta_1_zjian}, #{sta_1_donan}, #{sta_1_dobei}, 
+	#{sta_2_name}, #{sta_2_xibei}, #{sta_2_xinan}, #{sta_2_zjian}, #{sta_2_donan}, #{sta_2_dobei}, 
+	#{sta_3_name}, #{sta_3_xibei}, #{sta_3_xinan}, #{sta_3_zjian}, #{sta_3_donan}, #{sta_3_dobei}, 
+	#{sta_4_name}, #{sta_4_xibei}, #{sta_4_xinan}, #{sta_4_zjian}, #{sta_4_donan}, #{sta_4_dobei}, 
+	#{sta_5_name}, #{sta_5_xibei}, #{sta_5_xinan}, #{sta_5_zjian}, #{sta_5_donan}, #{sta_5_dobei}, 
+	#{sta_6_name}, #{sta_6_xibei}, #{sta_6_xinan}, #{sta_6_zjian}, #{sta_6_donan}, #{sta_6_dobei}, 
+	#{sta_7_name}, #{sta_7_xibei}, #{sta_7_xinan}, #{sta_7_zjian}, #{sta_7_donan}, #{sta_7_dobei}, 
+	#{sta_8_name}, #{sta_8_xibei}, #{sta_8_xinan}, #{sta_8_zjian}, #{sta_8_donan}, #{sta_8_dobei}, 
+	#{sta_9_name}, #{sta_9_xibei}, #{sta_9_xinan}, #{sta_9_zjian}, #{sta_9_donan}, #{sta_9_dobei}, 
+	#{sta_10_name}, #{sta_10_xibei}, #{sta_10_xinan}, #{sta_10_zjian}, #{sta_10_donan}, #{sta_10_dobei}, 
+	#{sta_11_name}, #{sta_11_xibei}, #{sta_11_xinan}, #{sta_11_zjian}, #{sta_11_donan}, #{sta_11_dobei}, 
+	#{sta_12_name}, #{sta_12_xibei}, #{sta_12_xinan}, #{sta_12_zjian}, #{sta_12_donan}, #{sta_12_dobei}, 
+	#{sta_13_name}, #{sta_13_xibei}, #{sta_13_xinan}, #{sta_13_zjian}, #{sta_13_donan}, #{sta_13_dobei}, 
+	#{sta_14_name}, #{sta_14_xibei}, #{sta_14_xinan}, #{sta_14_zjian}, #{sta_14_donan}, #{sta_14_dobei}, 
+	#{sta_15_name}, #{sta_15_xibei}, #{sta_15_xinan}, #{sta_15_zjian}, #{sta_15_donan}, #{sta_15_dobei}, 
+	#{sta_16_name}, #{sta_16_xibei}, #{sta_16_xinan}, #{sta_16_zjian}, #{sta_16_donan}, #{sta_16_dobei}, 
+	#{sta_17_name}, #{sta_17_xibei}, #{sta_17_xinan}, #{sta_17_zjian}, #{sta_17_donan}, #{sta_17_dobei}, 
+	#{sta_18_name}, #{sta_18_xibei}, #{sta_18_xinan}, #{sta_18_zjian}, #{sta_18_donan}, #{sta_18_dobei}, 
+	#{sta_19_name}, #{sta_19_xibei}, #{sta_19_xinan}, #{sta_19_zjian}, #{sta_19_donan}, #{sta_19_dobei}, 
+	#{sta_20_name}, #{sta_20_xibei}, #{sta_20_xinan}, #{sta_20_zjian}, #{sta_20_donan}, #{sta_20_dobei}, 
+	#{sta_21_name}, #{sta_21_xibei}, #{sta_21_xinan}, #{sta_21_zjian}, #{sta_21_donan}, #{sta_21_dobei}, 
+	#{sta_22_name}, #{sta_22_xibei}, #{sta_22_xinan}, #{sta_22_zjian}, #{sta_22_donan}, #{sta_22_dobei}, 
+	#{sta_23_name}, #{sta_23_xibei}, #{sta_23_xinan}, #{sta_23_zjian}, #{sta_23_donan}, #{sta_23_dobei}, 
+	#{sta_24_name}, #{sta_24_xibei}, #{sta_24_xinan}, #{sta_24_zjian}, #{sta_24_donan}, #{sta_24_dobei}, 
+	#{sta_25_name}, #{sta_25_xibei}, #{sta_25_xinan}, #{sta_25_zjian}, #{sta_25_donan}, #{sta_25_dobei}, 
+	#{sta_26_name}, #{sta_26_xibei}, #{sta_26_xinan}, #{sta_26_zjian}, #{sta_26_donan}, #{sta_26_dobei}, 
+	#{sta_27_name}, #{sta_27_xibei}, #{sta_27_xinan}, #{sta_27_zjian}, #{sta_27_donan}, #{sta_27_dobei}, 
+	#{sta_28_name}, #{sta_28_xibei}, #{sta_28_xinan}, #{sta_28_zjian}, #{sta_28_donan}, #{sta_28_dobei}, 
+	#{sta_29_name}, #{sta_29_xibei}, #{sta_29_xinan}, #{sta_29_zjian}, #{sta_29_donan}, #{sta_29_dobei}, 
+	#{sta_30_name}, #{sta_30_xibei}, #{sta_30_xinan}, #{sta_30_zjian}, #{sta_30_donan}, #{sta_30_dobei}
+	)
+    </insert>
+</mapper>

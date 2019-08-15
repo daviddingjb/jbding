@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.trusdata.tlhf.manager.mapper.ManagerMapper">
+	<resultMap id="BaseResultMap" type="com.trusdata.tlhf.pact.bean.ReportInsertBean">
+		<result property="id1" column="id1" jdbcType="VARCHAR"/>
+		<result property="year1" column="year1" jdbcType="DATE"/>
+		<result property="county" column="county" jdbcType="VARCHAR"/>
+		<result property="township" column="township" jdbcType="VARCHAR"/>
+		<result property="village" column="village" jdbcType="VARCHAR"/>
+		<result property="group1" column="group1" jdbcType="VARCHAR"/>
+		<result property="name1" column="name1" jdbcType="VARCHAR"/>
+	</resultMap>
+	<resultMap id="BaseResultMap1" type="com.trusdata.tlhf.manager.bean.ManagerTopicListBean">
+		<result property="id1" column="id1" jdbcType="VARCHAR" />
+		<result property="obj_name" column="obj_name" jdbcType="VARCHAR" />
+		<result property="entrusted_id" column="entrusted_id" jdbcType="VARCHAR" />
+		<result property="entrusted_date" column="entrusted_date" jdbcType="VARCHAR" />
+	</resultMap>
+	<resultMap id="BaseResultMap2" type="com.trusdata.tlhf.manager.bean.User">
+		<result property="t_user" column="t_user" jdbcType="VARCHAR" />
+		<result property="t_password" column="t_password" jdbcType="VARCHAR" />
+		<result property="t_level" column="t_level" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<!--查询条件 -->
+	<sql id="sqlCondition">
+		<![CDATA[
+			FROM tlhf.materials 
+			WHERE 1 = 1
+		]]>
+		<if test="t_work_user !=null and t_work_user != ''">
+			AND input_name = #{t_work_user}
+		</if>
+	</sql>
+	
+	<!-- 取得总数 -->
+	<select id="selectCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean">
+		SELECT count(0)
+		<include refid="sqlCondition" />
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="selectInfo" parameterType="com.trusdata.tlhf.pact.bean.PactSearchBean"
+		resultMap="BaseResultMap1">
+		SELECT id, obj_name, entrusted_id, entrusted_date
+		FROM tlhf.t_topic
+		ORDER BY entrusted_date DESC
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
+	
+	<!-- 取得总数 -->
+	<select id="selectUserCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.tlhf.manager.bean.UserSearchBean">
+		SELECT count(0)
+		FROM tlhf.p_user
+		WHERE t_level != '0'
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="selectUserInfo" parameterType="com.trusdata.tlhf.manager.bean.UserSearchBean"
+		resultMap="BaseResultMap2">
+		SELECT t_user, t_password, t_level
+		FROM tlhf.p_user
+		WHERE t_level != '0'
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
+	
+</mapper>

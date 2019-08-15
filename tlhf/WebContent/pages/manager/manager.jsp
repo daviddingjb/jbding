@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/css/style.css">
 <jsp:include page="/jslib/inc_jquery.jsp" />
-<title>随州脱贫验收系统</title>
+<title>北京天朗汇丰环境检测有限公司</title>
 </head>
 <body>
 	<div class="container-fluid">
