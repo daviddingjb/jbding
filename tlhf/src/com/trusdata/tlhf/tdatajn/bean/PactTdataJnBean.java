@@ -1,7 +1,6 @@
 package com.trusdata.tlhf.tdatajn.bean;
 
 import java.util.Date;
-
 import com.trusdata.common.bean.PageBean;
 
 /**
@@ -11,7 +10,11 @@ import com.trusdata.common.bean.PageBean;
  */
 public class PactTdataJnBean extends PageBean {
 
-	static final long serialVersionUID = 2831155708368181759L;
+	/**
+	 * serialVersionUID.
+	 */
+	private static final long serialVersionUID = 3001800263371300263L;
+
 	private String id;
 	private String entrusted_id;
 	private String entity_name;
