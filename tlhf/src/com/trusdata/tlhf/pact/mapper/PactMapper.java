@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.dao.DataAccessException;
 
+import com.trusdata.tlhf.common.bean.TlhfTopicBean;
 import com.trusdata.tlhf.common.bean.TlhfUserBean;
 import com.trusdata.tlhf.pact.bean.IndoorAirBean;
 import com.trusdata.tlhf.pact.bean.PactIdentifyBean;
@@ -23,6 +24,12 @@ public interface PactMapper {
 	 * @return
 	 * @throws DataAccessException
 	 */
+	public Integer selectTopicCount(TlhfUserBean queryBean)
+			throws DataAccessException;
+
+	public List<TlhfTopicBean> selectTopicInfo(TlhfUserBean queryBean)
+			throws DataAccessException;
+	
 	public Integer selectCount(TlhfUserBean queryBean)
 			throws DataAccessException;
 

@@ -5,11 +5,12 @@
 		<action name="login_*" class="com.trusdata.integrate.login.action.LoginAction" method="{1}">
 			<result name="init">/pages/frontlogin.jsp</result>
 			<result name="manager" type="redirectAction">manager_init</result>
-			<result name="reporter" type="redirectAction">pact_init</result>
+			<result name="reporter" type="redirectAction">pact_topic</result>
 	        <result name="error" type="redirectAction">login_init</result>
 		</action>
 		
 		<action name="pact_*" class="com.trusdata.tlhf.pact.action.PactAction" method="{1}">
+			<result name="topic">/pages/input/reporter.jsp</result>
 			<result name="init">/pages/input/reporter.jsp</result>
 			<result name="add">/pages/input/add_indoor_air.jsp</result>
 	        <result name="add_ok" type="redirectAction">pact_init</result>

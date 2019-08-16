@@ -75,7 +75,16 @@
 		<result property="inputer" column="input_name" jdbcType="VARCHAR" />
 		<result property="call_way" column="call_way" jdbcType="VARCHAR" />
 	</resultMap>
-	
+	<resultMap id="BaseResultMap2" type="com.trusdata.tlhf.common.bean.TlhfTopicBean">
+		<result property="id" column="id" jdbcType="VARCHAR" />
+		<result property="obj_name" column="obj_name" jdbcType="VARCHAR" />
+		<result property="entrusted_id" column="entrusted_id" jdbcType="VARCHAR" />
+		<result property="entrusted_date" column="entrusted_date" jdbcType="VARCHAR" />
+		<result property="input_name" column="input_name" jdbcType="VARCHAR" />
+  		<result property="create_dt" column="create_dt" jdbcType="DATE"/>
+  		<result property="upd_name" column="upd_name" jdbcType="VARCHAR"/>
+  		<result property="upd_dt" column="upd_dt" jdbcType="DATE"/>
+	</resultMap>
 	
 	<!--查询条件 -->
 	<sql id="sqlCondition">
@@ -106,6 +115,25 @@
     <delete id="del" parameterType="com.trusdata.tlhf.pact.bean.PactIdentifyBean" >
 		DELETE FROM tlhf.indoor_air WHERE id = #{id1}
     </delete>
+	
+	<!-- 取得总数 -->
+	<select id="selectTopicCount" resultType="java.lang.Integer"
+		parameterType="com.trusdata.tlhf.common.bean.TlhfUserBean">
+		SELECT count(0) FROM tlhf.t_topic WHERE 1 = 1
+		<if test="t_work_user !=null and t_work_user != ''">
+			AND input_name = #{t_work_user}
+		</if>
+	</select>
+	
+	<!-- 取得所有信息 -->
+	<select id="selectTopicInfo" parameterType="com.trusdata.tlhf.common.bean.TlhfUserBean"
+		resultMap="BaseResultMap2">
+		SELECT id, obj_name, entrusted_id, entrusted_date, input_name, create_dt, upd_name, upd_dt FROM tlhf.t_topic WHERE 1 = 1
+		<if test="t_work_user !=null and t_work_user != ''">
+			AND input_name = #{t_work_user}
+		</if>
+		LIMIT #{itemStart4Sql}, #{itemsInPage}
+	</select>
 	
     <insert id="insertIndoorAir" parameterType="com.trusdata.tlhf.pact.bean.IndoorAirBean">
 	insert into tlhf.indoor_air 

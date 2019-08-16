@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.trusdata.common.action.BasePageAction;
 import com.trusdata.integrate.db.bean.P_user;
+import com.trusdata.tlhf.common.bean.TlhfTopicBean;
 import com.trusdata.tlhf.common.bean.TlhfUserBean;
 import com.trusdata.tlhf.pact.bean.IndoorAirBean;
 import com.trusdata.tlhf.pact.bean.PactIdentifyBean;
@@ -31,9 +32,11 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 	// 服务器详细信息
 	private IndoorAirBean indoor;
 	List<PactInputListBean> serverList;
+	List<TlhfTopicBean> topicList;
 
 	private List<String> dbmsg;
 	private TlhfUserBean searchBean = new TlhfUserBean();
+	private String actionFlag;
 
 	/**
 	 * 资源管理Service
@@ -41,6 +44,13 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 	@Autowired
 	PactService service;
 
+	public String topic() {
+		String rtn = "topic";
+		query(rtn);
+		actionFlag = rtn;
+		return rtn;
+	}
+	
 	/**
 	 * 画面初始化
 	 * 
@@ -48,13 +58,14 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 	 */
 	public String init() {
 		String rtn = "init";
-		query();
+		query(rtn);
 
+		actionFlag = rtn;
 		return rtn;
 	}
 
-	public String query() {
-
+	public String query(String rtn) {
+		String rtnString;
 		// 获取登录用户名
 		HashMap<String, Object> loginUser = this.getLoginUser();
 		if (loginUser == null) {
@@ -62,17 +73,26 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 		}
 		P_user userBean = (P_user) loginUser.get("p_user");
 		searchBean.setT_work_user(userBean.getT_user());
+		
+		if ("topic".equals(rtn)) {
+			topicList = new ArrayList<TlhfTopicBean>();
+			topicList = service.selectTopic(searchBean);
+			rtnString = "topic";
+		} else {
+			serverList = new ArrayList<PactInputListBean>();
+			serverList = service.selectAll(searchBean);
+			rtnString = "sub";
+		}
 
-		serverList = new ArrayList<PactInputListBean>();
-		serverList = service.selectAll(searchBean);
-		return "sub";
+		actionFlag = rtnString;
+		return rtnString;
 	}
 
 	public String toadd() {
 		String rtn = "add";
 
 		rtn = add(indoor);
-
+		actionFlag = rtn;
 		return rtn;
 	}
 
@@ -109,6 +129,7 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 			return rtn;
 		}
 
+		actionFlag = rtn;
 		return rtn;
 	}
 
@@ -120,8 +141,9 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 		PactIdentifyBean delBean = new PactIdentifyBean();
 		delBean.setId1(id[Integer.parseInt(index[0])]);
 		service.del(delBean);
-		rtn = query();
+		rtn = query(rtn);
 
+		actionFlag = rtn;
 		return rtn;
 	}
 
@@ -165,6 +187,22 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 
 	public void setServerList(List<PactInputListBean> serverList) {
 		this.serverList = serverList;
+	}
+
+	public List<TlhfTopicBean> getTopicList() {
+		return topicList;
+	}
+
+	public void setTopicList(List<TlhfTopicBean> topicList) {
+		this.topicList = topicList;
+	}
+
+	public String getActionFlag() {
+		return actionFlag;
+	}
+
+	public void setActionFlag(String actionFlag) {
+		this.actionFlag = actionFlag;
 	}
 
 }

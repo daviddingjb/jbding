@@ -11,6 +11,7 @@
 <title>北京天朗汇丰环境检测有限公司</title>
 </head>
 <body>
+	<s:set name="actionFlag" value="actionFlag"/>
 	<div class="container-fluid">
 	    <s:include value="/pages/common/head.jsp" />
 	    <div class="row">
@@ -18,7 +19,12 @@
         	<div class="col-xs-10 content">
 	            <div class="row">
 	                <div class="col-xs-6">
-	                    <p class="newWelcome">基本信息-室内空气检测协议书</p>
+						<s:if test="#actionFlag=='topic'">
+							<p class="newWelcome">基本信息-工程信息</p>
+						</s:if>
+						<s:else>
+							<p class="newWelcome">基本信息-室内空气检测协议书</p>
+						</s:else>
 	                </div>
 	            </div>
 				<%-- 局部更新用 --%>
@@ -40,7 +46,14 @@
 			                    </div>
 			                    <div class="col-xs-12">
 			                        <div class="group-lable">
-										<s:include value="reporter_body_content.jsp" />
+			                        	<s:if test="#actionFlag=='topic'">
+											<s:include value="topic_body_content.jsp" />
+			                        	</s:if>
+			                        	<s:elseif test="#actionFlag=='init'">
+			                        	</s:elseif>
+			                        	<s:else>
+											<s:include value="reporter_body_content.jsp" />
+			                        	</s:else>
 			                        </div>
 			                    </div>
 			                </div>

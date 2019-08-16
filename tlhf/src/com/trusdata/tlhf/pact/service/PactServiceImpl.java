@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.trusdata.common.util.PageUtil;
+import com.trusdata.tlhf.common.bean.TlhfTopicBean;
 import com.trusdata.tlhf.common.bean.TlhfUserBean;
 import com.trusdata.tlhf.pact.bean.IndoorAirBean;
 import com.trusdata.tlhf.pact.bean.PactIdentifyBean;
@@ -16,6 +17,16 @@ import com.trusdata.tlhf.pact.mapper.PactMapper;
 public class PactServiceImpl implements PactService {
 	@Autowired
 	PactMapper mapper;
+	
+	@Override
+	public List<TlhfTopicBean> selectTopic(TlhfUserBean queryBean) {
+
+		// 查询数据总数
+		int sumItems = mapper.selectTopicCount(queryBean);
+		PageUtil.resetPageBean(queryBean, sumItems);
+		// 查询所有信息
+		return mapper.selectTopicInfo(queryBean);
+	}
 	
 	@Override
 	public List<PactInputListBean> selectAll(TlhfUserBean queryBean) {
