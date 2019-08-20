@@ -42,7 +42,8 @@ public class TestExportWord {
 		Map<String, Object> dataList = new HashMap<String, Object>();
 		dataList.put("TITLE", "个人体检表");
 		dataList.put("TABLEDATA", list);
-		ew.exportCheckWord(dataList, document, "C:\\work\\test\\expWordTest.docx");
+		ew.exportCheckWord(dataList, document,
+				"C:\\work\\test\\expWordTest.docx");
 		System.out.println("文档生成成功");
 	}
 }

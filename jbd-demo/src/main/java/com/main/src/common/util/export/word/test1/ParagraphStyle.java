@@ -1,8 +1,7 @@
 package com.main.src.common.util.export.word.test1;
 
 /**
- * @Description 段落样式 2018年12月1日 下午4:20:05
- * @Author Huangxiaocong
+ * @Description 段落样式
  */
 public class ParagraphStyle {
 
