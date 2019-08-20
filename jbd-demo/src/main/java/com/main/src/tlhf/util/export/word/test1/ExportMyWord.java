@@ -44,8 +44,8 @@ public class ExportMyWord {
         //加载模板(路径)数据
         config.setClassForTemplateLoading(this.getClass(), "");
         //设置异常处理器 这样的话 即使没有属性也不会出错 如：${list.name}...不会报错
-//        config.setTemplateExceptionHandler(TemplateExceptionHandler.IGNORE_HANDLER);
-        config.setTemplateExceptionHandler(TemplateExceptionHandler.DEBUG_HANDLER);
+        config.setTemplateExceptionHandler(TemplateExceptionHandler.IGNORE_HANDLER);
+//        config.setTemplateExceptionHandler(TemplateExceptionHandler.DEBUG_HANDLER);
         Template template = null;
         if(templateName.endsWith(".ftl")) {
             templateName = templateName.substring(0, templateName.indexOf(".ftl"));
