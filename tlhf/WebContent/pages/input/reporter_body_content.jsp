@@ -38,7 +38,7 @@
 
 		//给新增班级按钮添加点击事件，实现信息的新增
 		$("#btnNew").click(function() {
-			$( "#dialog" ).OpenDialog({title:"录入服务",width:1080}, "pact_toadd", "queryBean.pageIndex=<s:property value='queryBean.pageIndex'/>");
+			$( "#dialog" ).OpenDialog({title:"录入服务-基本信息",width:1080}, "pact_toadd", "queryBean.pageIndex=<s:property value='queryBean.pageIndex'/>");
 		});
 
 		//给删除按钮添加点击事件，实现信息的删除

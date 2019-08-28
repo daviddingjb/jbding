@@ -12,7 +12,7 @@
 		<action name="pact_*" class="com.trusdata.tlhf.pact.action.PactAction" method="{1}">
 			<result name="topic">/pages/input/reporter.jsp</result>
 			<result name="init">/pages/input/reporter.jsp</result>
-			<result name="add">/pages/input/add_indoor_air.jsp</result>
+			<result name="add">/pages/input/add_basic_msg.jsp</result>
 	        <result name="add_ok" type="redirectAction">pact_init</result>
 			<result name="sub">/pages/input/reporter_body_content.jsp</result>
 			<result name="upd">/pages/input/updInit.jsp</result>
