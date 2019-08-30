@@ -51,7 +51,7 @@
                 <w:szCs w:val="44"/>
               </w:rPr>
               <w:lastRenderedPageBreak/>
-              <w:t>工作报告</w:t>
+              <w:t>学习计划</w:t>
             </w:r>
           </w:p>
           <w:tbl>
@@ -116,7 +116,7 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>五、检测结果：</w:t>
+                    <w:t>一、学习计划：</w:t>
                   </w:r>
                 </w:p>
                 <w:p w:rsidR="001A6859" w:rsidRDefault="001A6859" w:rsidP="001A6859">
@@ -147,7 +147,7 @@
                       <w:rFonts w:hint="eastAsia"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>依据《民用建筑工程室内环境污染控制规范》</w:t>
+                    <w:t>XXXXXXXXXXXXXXXXXXXXXXXXXXXX</w:t>
                   </w:r>
                   <w:r>
                     <w:rPr>
@@ -155,14 +155,14 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>GB50325-2010(2013年版）</w:t>
+                    <w:t>YYYYYYYYYYYYYYYYYYYY</w:t>
                   </w:r>
                   <w:r>
                     <w:rPr>
                       <w:rFonts w:hint="eastAsia"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>，对</w:t>
+                    <w:t>XXX</w:t>
                   </w:r>
                   <w:r>
                     <w:rPr>
@@ -177,7 +177,7 @@
                       <w:rFonts w:hint="eastAsia"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>工程室内环境污染物浓度进行检测，检测标准方法符合规定要求，检测结果如下：</w:t>
+                    <w:t>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX：</w:t>
                   </w:r>
                 </w:p>
                 <w:p w:rsidR="001A6859" w:rsidRDefault="001A6859" w:rsidP="001A6859">
@@ -201,7 +201,7 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>检测结果汇总表</w:t>
+                    <w:t>学习计划表</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
@@ -233,7 +233,7 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>${check_name}</w:t>
+                    <w:t>Python</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
@@ -284,7 +284,7 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>检测</w:t>
+                    <w:t>学习</w:t>
                   </w:r>
                 </w:p>
                 <w:p w:rsidR="001A6859" w:rsidRDefault="001A6859" w:rsidP="001A6859">
@@ -306,7 +306,7 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>项目</w:t>
+                    <w:t>科目</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
@@ -335,7 +335,7 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>限量值</w:t>
+                    <w:t>天数</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
@@ -364,7 +364,7 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>位置</w:t>
+                    <w:t>进度</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
@@ -393,7 +393,7 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>测点号</w:t>
+                    <w:t>编号</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
@@ -422,7 +422,7 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>实测结果（mg/m³）</w:t>
+                    <w:t>学习效果</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
@@ -451,7 +451,7 @@
                       <w:color w:val="000000"/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>本项</w:t>
+                    <w:t>学习</w:t>
                   </w:r>
                 </w:p>
                 <w:p w:rsidR="001A6859" w:rsidRDefault="001A6859" w:rsidP="001A6859">
@@ -565,7 +565,7 @@
                       <w:bCs/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>测点值</w:t>
+                    <w:t>预计</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
@@ -592,7 +592,7 @@
                       <w:bCs/>
                       <w:sz w:val="24"/>
                     </w:rPr>
-                    <w:t>平均值</w:t>
+                    <w:t>实际</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
@@ -914,7 +914,7 @@
               <w:sz w:val="18"/>
               <w:szCs w:val="18"/>
             </w:rPr>
-            <w:t xml:space="preserve">                                        北京天朗汇丰环境检测有限公司</w:t>
+            <w:t xml:space="preserve">                                        好好学习，天天向上</w:t>
           </w:r>
           <w:r>
             <w:rPr>
@@ -932,7 +932,7 @@
               <w:sz w:val="18"/>
               <w:szCs w:val="18"/>
             </w:rPr>
-            <w:t>ZLJL-063 B/1</w:t>
+            <w:t>飞的更高，摔得更死</w:t>
           </w:r>
         </w:p>
       </w:hdr>
