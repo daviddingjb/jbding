@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.trusdata.common.util.PageUtil;
 import com.trusdata.tlhf.common.bean.TlhfTopicBean;
 import com.trusdata.tlhf.common.bean.TlhfUserBean;
-import com.trusdata.tlhf.pact.bean.IndoorAirBean;
+import com.trusdata.tlhf.pact.bean.BasicBean;
 import com.trusdata.tlhf.pact.bean.PactIdentifyBean;
 import com.trusdata.tlhf.pact.bean.PactInputListBean;
 import com.trusdata.tlhf.pact.mapper.PactMapper;
@@ -39,9 +39,9 @@ public class PactServiceImpl implements PactService {
 	}
 
 	@Override
-	public Integer insert(IndoorAirBean insertBean) {
+	public Integer insert(BasicBean insertBean) {
 		int flg = 0;
-		mapper.insertIndoorAir(insertBean);
+		mapper.insertBasic(insertBean);
 		return flg;
 	}
 

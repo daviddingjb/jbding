@@ -6,7 +6,7 @@ import org.springframework.dao.DataAccessException;
 
 import com.trusdata.tlhf.common.bean.TlhfTopicBean;
 import com.trusdata.tlhf.common.bean.TlhfUserBean;
-import com.trusdata.tlhf.pact.bean.IndoorAirBean;
+import com.trusdata.tlhf.pact.bean.BasicBean;
 import com.trusdata.tlhf.pact.bean.PactIdentifyBean;
 import com.trusdata.tlhf.pact.bean.PactInputListBean;
 
@@ -36,7 +36,7 @@ public interface PactMapper {
 	public List<PactInputListBean> selectInfo(TlhfUserBean queryBean)
 			throws DataAccessException;
 
-	public Integer insertIndoorAir(IndoorAirBean insertBean)
+	public Integer insertBasic(BasicBean insertBean)
 			throws DataAccessException;
 
 	public Integer del(PactIdentifyBean delBean)

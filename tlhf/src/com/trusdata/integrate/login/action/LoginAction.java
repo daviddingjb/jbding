@@ -101,11 +101,11 @@ public class LoginAction extends BaseAction {
         			if ("0".equals(userBean.getT_level())) {
         				rtn = "manager";
 					} else if ("1".equals(userBean.getT_level())) {
-        				rtn = "reporter";
+        				rtn = "basic";
 					} else if ("8".equals(userBean.getT_level())) {
         				rtn = "manager";
 					} else if ("9".equals(userBean.getT_level())) {
-        				rtn = "reporter";
+        				rtn = "basic";
 					} else {
         				rtn = "other";
 					}

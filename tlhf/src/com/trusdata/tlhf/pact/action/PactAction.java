@@ -12,10 +12,11 @@ import com.trusdata.common.action.BasePageAction;
 import com.trusdata.integrate.db.bean.P_user;
 import com.trusdata.tlhf.common.bean.TlhfTopicBean;
 import com.trusdata.tlhf.common.bean.TlhfUserBean;
+import com.trusdata.tlhf.pact.bean.BasicBean;
 import com.trusdata.tlhf.pact.bean.IndoorAirBean;
 import com.trusdata.tlhf.pact.bean.PactIdentifyBean;
 import com.trusdata.tlhf.pact.bean.PactInputListBean;
-import com.trusdata.tlhf.pact.bean.SetIndoorAirBean;
+import com.trusdata.tlhf.pact.bean.SetBasicBean;
 import com.trusdata.tlhf.pact.service.PactService;
 
 /**
@@ -30,6 +31,7 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 	private static final long serialVersionUID = -2225527419269363691L;
 
 	// 服务器详细信息
+	private BasicBean basic;
 	private IndoorAirBean indoor;
 	List<PactInputListBean> serverList;
 	List<TlhfTopicBean> topicList;
@@ -91,12 +93,12 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 	public String toadd() {
 		String rtn = "add";
 
-		rtn = add(indoor);
+		rtn = add(basic);
 		actionFlag = rtn;
 		return rtn;
 	}
 
-	public String add(IndoorAirBean server) {
+	public String add(BasicBean server) {
 		String rtn = "add";
 
 		try {
@@ -113,8 +115,8 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 				P_user userBean = (P_user) usr.get("p_user");
 				String input_name = userBean.getT_user();
 
-				IndoorAirBean insert = new IndoorAirBean();
-				insert = SetIndoorAirBean.setBean(server);
+				BasicBean insert = new BasicBean();
+				insert = SetBasicBean.setBean(server);
 
 				insert.setId(UUID.randomUUID().toString());
 				insert.setInput_name(input_name);
@@ -165,13 +167,13 @@ public class PactAction extends BasePageAction<TlhfUserBean> {
 		searchBean = queryBean;
 	}
 
-//	public TlhfUserBean getSearchBean() {
-//		return searchBean;
-//	}
-//
-//	public void setSearchBean(TlhfUserBean searchBean) {
-//		this.searchBean = searchBean;
-//	}
+	public BasicBean getBasic() {
+		return basic;
+	}
+
+	public void setBasic(BasicBean basic) {
+		this.basic = basic;
+	}
 
 	public IndoorAirBean getIndoor() {
 		return indoor;
